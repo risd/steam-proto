@@ -1,2 +1,2 @@
 web: jekyll serve --watch --config _config.dev.yml
-sass: sass --sourcemap --watch assets/styles/scss:assets/styles/css
+sass: sass --watch assets/styles/scss:assets/styles/css

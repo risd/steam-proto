@@ -21,6 +21,7 @@ body{
 	.wrapper{
 		width:100%;
 		background:rgb(250,250,250);
+
 	}
 
 	.main-nav-container{
@@ -95,7 +96,7 @@ body{
 	}
 
 	.two-column{
-		width:351px;
+		width:350px;
 	}
 
 	.three-column{
@@ -128,8 +129,14 @@ body{
 		color:rgb(230,230,230);
 		position:relative;
 		z-index:1;
+		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
 	}
 
+h3{
+	font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
+		margin:0px;
+		font-size:32px;
+}
 	
 
 	
@@ -144,7 +151,9 @@ body{
 
 	section div p{
 		font-size:22px;
-		line-height: 28px;
+		line-height:32px;
+		color:rgb(60,60,60);
+		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
 		
 	}
 
@@ -168,6 +177,10 @@ body{
 		z-index:3;
 
 	}
+	.image-break{
+		margin-top:200px;
+		margin-bottom:200px;
+	}
 
 	.making-process-title{
 		text-align:center;
@@ -190,10 +203,13 @@ body{
 
 	.maker-profile{
 		margin-bottom:80px;
+		position:relative;
+		z-index:2;
 	}
 	
 
 	.maker-profile-name{
+		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
 		margin:0px;
 		font-size:32px;
 	}
@@ -213,4 +229,131 @@ body{
 		height:700px;
 		background:rgb(240,240,240);
 	}
+
+	.news-feed{
+		position:relative;
+		z-index:2;
+	}
+
+
+	.tweet{
+		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
+		font-size:32px;
+		line-height:42px;
+		margin:0px;
+	}
+
+	.tweet-data{
+		margin:0px;
+	}
+
+	#info-graphics{
+		margin-top:200px;
+		padding-bottom:200px;
+	}
+
+
+	.graphic{
+		float:left;
+		margin-right:20px;
+		margin-bottom:80px;
+	}
+
+	.graphic-description{
+		font-family:baskerville;
+		font-style:italic;
+	}
+
+	.graphic:nth-child(3n+3){
+		margin-right:0px;
+		/*background:blue;*/
+
+	}
+
+	form{
+		margin-bottom:200px;
+		margin-top:80px;
+	}
+
+	input,label{
+		font-size:22px;
+		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
+
+
+	}
+
+	input{
+		border:none;
+		padding:20px 0px 10px 0px;
+		border-bottom:1px dotted rgb(200,200,200);
+	}
+
+	input:nth-child(odd){
+		/*background:green;*/
+		margin-right:4px;
+	}
+
+	label{
+		display:block;
+		text-align:center;
+		
+	}
+
+	.button-group{
+		float:left;
+		margin-right:20px;
+	}
+
+	.button-group:nth-child(4n+3){
+		margin-right:0px;
+		/*background:orange;*/
+	}
+
+	input[type=radio]{
+		margin-top:20px;
+		margin-left:20px;
+		/*padding-top:20px;*/
+		text-align:center;
+	}
+
+/*@media only screen and (min-width:600px) and (max-width:1089px){
+
+	p{
+		color:red;
+	}
+	section{
+		width:720px;
+		background:rgb(220,220,220);
+	}
+
+	.main-nav{
+		width:100%;
+		background:green;
+	}
+
+	.middle{
+		margin-left:0px;
+		border:1px solid red;
+	}
+
+	.two-column{
+		width:32.110092%;
+		background:yellow;
+	}
+
+	.one-column{
+		width:15.137615%;
+		background:orange;
+	}
+
+	.three-column{
+		width:48.110092%;
+		background:rgb(250,250,250);
+	}
+
+	.making-process-step{
+		margin-left:0px;
+	}
+ }*/
+
 
