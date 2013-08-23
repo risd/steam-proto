@@ -434,6 +434,7 @@ h3{
 
  	h2{
  		font-size:150px;
+ 		line-height:130px;
  		/*background:blue;*/
  		width:720px;
  	}
@@ -479,7 +480,7 @@ h3{
  @media only screen and (min-width:320px) and (max-width:729px){
  	section{
  		width:350px;
- 		background:yellow;
+ 		/*background:yellow;*/
  	}
 
  	h1{
@@ -488,7 +489,7 @@ h3{
 
  	.main-nav{
  		width:350px;
- 		background:gray;
+ 		/*background:gray;*/
  	}
 
  	.main-nav ul li:nth-child(even){
@@ -518,6 +519,8 @@ h3{
 
  	h2{
  		font-size:72px;
+ 		letter-spacing:-1px;
+ 		line-height:63px;
  	}
  	input{
  		float:none;
