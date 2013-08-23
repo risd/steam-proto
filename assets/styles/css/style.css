@@ -34,6 +34,19 @@ body {
   margin-top: 0px;
   font-size: 36px; }
 
+.logo span.a {
+  -webkit-animation: colorFade 8s linear infinite; }
+
+@-webkit-keyframes colorFade {
+  0% {
+    color: black; }
+
+  50% {
+    color: #c8c8c8; }
+
+  100% {
+    color: black; } }
+
 .main-nav ul {
   /*background:yellow;*/
   margin-top: 0px;
