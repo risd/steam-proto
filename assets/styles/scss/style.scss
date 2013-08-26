@@ -179,6 +179,10 @@ body{
 		margin-left:185px;
 	}
 
+	.jump-two {
+		margin-left:350px;
+	}
+
 	
 
 	/*this is the big honkin' type for each section*/
@@ -217,7 +221,24 @@ body{
 		-webkit-text-rendering: optimizeLegibility;
 		text-rendering: optimizeLegibility;
 	}
+
+	/* NEWS Section rules */
 	
+	div.event, 
+	div.tweet, 
+	div.resource-link, 
+	div.feature, 
+	div.case-study, 
+	div.video {
+	/*	z-index: 3; */
+	} 
+	
+	h5.rotate-90 {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		}
 
 	.introduction{
 		position:absolute;
