@@ -108,7 +108,7 @@ body {
 
 /* 04. GRID COLUMNS =======================================*/
 /*this is the section container that the grid is based from*/
-section {
+.full-width {
   width: 1090px;
   margin: 0px auto;
   position: relative;
@@ -142,6 +142,8 @@ h2 {
   letter-spacing: -8px;
   color: #e6e6e6;
   position: relative;
+  -webkit-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
   z-index: 1;
   font-family: 'Mercury Display A', 'Mercury Display B';
   font-weight: 700;
@@ -161,7 +163,7 @@ h3 {
   border-bottom: 1px dotted black;
   position: relative; }
 
-section div p {
+.content p {
   font-size: 22px;
   line-height: 32px;
   color: #3c3c3c;
@@ -249,7 +251,7 @@ section div p {
   z-index: 2; }
 
 /*type styling for a tweet*/
-.tweet {
+.content p.tweet {
   font-family: 'Mercury Display A', 'Mercury Display B';
   font-weight: 700;
   font-style: normal;
