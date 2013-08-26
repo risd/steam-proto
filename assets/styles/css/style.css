@@ -208,8 +208,28 @@ h5.rotate-90 {
 #creativity-is-a-skill {
   margin-bottom: 200px; }
 
-#creativity-is-a-skill .body-text {
+.image-block {
+  /*background:yellow;*/
+  position: relative;
   margin-top: -60px;
+  margin-bottom: 20px;
+  z-index: 2;
+  text-align: center; }
+
+.platonic .orb {
+  fill: rgba(80, 80, 80, 0.15);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation: pulse 2.5s ease-in-out  infinite alternate; }
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1); }
+
+  to {
+    -webkit-transform: scale(1.5); } }
+
+#creativity-is-a-skill .body-text {
+  /*margin-top:-60px;*/
   z-index: 3; }
 
 .image-break {
@@ -219,29 +239,42 @@ h5.rotate-90 {
 .image-break svg {
   width: 16.25%;
   height: 16%;
-  background: red;
+  /*background:red;*/
   margin: 0px; }
 
-.image-break svg:nth-child(1) {
-  -webkit-animation: spin 5s ease-in-out 1 3s; }
+.image-break svg:hover {
+  -webkit-animation: spin 5s ease-in-out alternate 2; }
 
-.image-break svg:nth-child(2) {
-  -webkit-animation: spin 5s ease-in-out 1 3.25s; }
+	/*.image-break svg:nth-child(2){
+		-webkit-animation: spin 5s ease-in-out 1 3.25s;
+	}
 
-.image-break svg:nth-child(3) {
-  -webkit-animation: spin 5s ease-in-out 1 3.5s; }
+	.image-break svg:nth-child(3){
+		-webkit-animation: spin 5s ease-in-out 1 3.5s;
+	}
 
-.image-break svg:nth-child(4) {
-  -webkit-animation: spin 5s ease-in-out 1 3.75s; }
+	.image-break svg:nth-child(4){
+		-webkit-animation: spin 5s ease-in-out 1 3.75s;
+	}
 
-.image-break svg:nth-child(5) {
-  -webkit-animation: spin 5s ease-in-out 1 4s; }
+	.image-break svg:nth-child(5){
+		-webkit-animation: spin 5s ease-in-out 1 4s;
+	}
 
-.image-break svg:nth-child(6) {
-  -webkit-animation: spin 5s ease-in-out 1 4.25s; }
+	.image-break svg:nth-child(6){
+		-webkit-animation: spin 5s ease-in-out 1 4.25s;
+	}*/
+.image-break svg polygon {
+  fill: #b4b4b4; }
+
+.image-break svg path {
+  fill: #b4b4b4; }
 
 .image-break svg polygon.right {
   fill: red; }
+
+.image-break svg .half-circle {
+  fill: #c8c8c8; }
 
 @-webkit-keyframes spin {
   0% {
@@ -278,6 +311,13 @@ p.figure {
   text-align: center;
   font-family: baskerville;
   font-style: italic; }
+
+#making-process {
+  background-image: url("../../img/shapes/bucky-bg.png"), url("../../img/shapes/bucky-slices.png");
+  background-repeat: no-repeat;
+  background-position: 0px 600px, 750px 900px;
+  /*background-color:rgba(220,220,220,1.0);*/
+  /*background:red;*/ }
 
 .making-process-step {
   width: 557px;
@@ -364,11 +404,19 @@ input, label {
   font-size: 22px;
   font-family: 'Sentinel A', 'Sentinel B';
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  background: none;
+  -webkit-transition: all 0.2s ease-in-out; }
+
+input:focus {
+  background: white;
+  color: #1e1e1e;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(30, 30, 30, 0.2); }
 
 input {
   border: none;
-  padding: 20px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   border-bottom: 1px dotted #c8c8c8;
   margin-bottom: 20px; }
 
