@@ -151,6 +151,7 @@ body{
 		margin:0px auto;
 		position:relative;
 		display:block;
+		/*background:yellow;*/
 	}
 	
 	.one-column{
@@ -403,8 +404,8 @@ body{
 		background-image:url('../../img/shapes/bucky-bg.png'),
 						 url('../../img/shapes/bucky-slices.png');
 		background-repeat:no-repeat;
-		background-position:0px 600px,
-							750px 900px;
+		background-position:-2% 600px,
+							85% 900px;
 
 		/*background-color:rgba(220,220,220,1.0);*/
 		/*background:red;*/
@@ -490,7 +491,7 @@ body{
 		height:350px;
 	}
 
-	.graphic-description{
+	p.graphic-description{
 		font-family:baskerville;
 		font-style:italic;
 	}
@@ -601,6 +602,11 @@ body{
  		width:680px;
  	}
 
+ 	#making-process{
+ 		background-position:-30% 550px,
+ 							108% 900px;
+ 	}
+
  	.maker-profile img{
  		width:330px;
  	}
@@ -661,6 +667,19 @@ body{
  	}*/
 
  }
+
+.squigglies{
+	width:25%;
+	height:16px;
+	border:1px solid red;
+}
+
+
+.squigglies rect{
+	width:100%;
+
+}
+
 
  @media only screen and (min-width:320px) and (max-width:729px){
  	.full-width{
