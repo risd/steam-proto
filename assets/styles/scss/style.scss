@@ -22,7 +22,7 @@ body{
 	.wrapper{
 		width:100%;
 		background:rgb(250,250,250);
-		
+
 
 	}
 
@@ -241,6 +241,11 @@ body{
 		margin-bottom:200px;
 	}
 
+	.image-break img{
+		width:721px;
+		height:481px;
+	}
+
 	.making-process-title{
 		text-align:center;
 		font-weight:normal;
@@ -267,6 +272,11 @@ body{
 		margin-left:185px;
 	}
 
+	.making-process-step img{
+		width:389px;
+		height:353px;
+	}
+
 	.maker-profile{
 		margin-bottom:80px;
 		position:relative;
@@ -283,6 +293,8 @@ body{
 	.maker-profile img{
 		float:left;
 		margin-right:20px;
+		width:350px;
+		height:286px;
 	}
 
 	.maker-description{
@@ -324,6 +336,11 @@ body{
 		float:left;
 		margin-right:20px;
 		margin-bottom:80px;
+	}
+
+	.graphic img{
+		width:350px;
+		height:350px;
 	}
 
 	.graphic-description{
@@ -389,13 +406,13 @@ body{
 /*first breakpoint*/
  @media only screen and (min-width:730px) and (max-width:1089px){
  	section{
- 		width:720px;
+ 		width:680px;
  		/*background:yellow;*/
  	}
 
  	.main-nav{
  	
- 		width:720px;
+ 		width:680px;
  	}
 
  	.main-nav ul li:nth-child(4){
@@ -416,10 +433,25 @@ body{
  		font-size:150px;
  		line-height:130px;
  		/*background:blue;*/
- 		width:720px;
+ 		width:680px;
  	}
+
+
  	.middle{
  		margin-left:0px;
+ 	}
+
+
+ 	.image-break img{
+ 		width:680px;
+ 	}
+
+ 	.maker-profile img{
+ 		width:330px;
+ 	}
+
+ 	.making-process-step img{
+ 		width:370px;
  	}
 
  	.making-process-step{
@@ -433,6 +465,8 @@ body{
 
  	.figure{
  		/*background:orange;*/
+ 		width:145px;
+ 		margin-right:10px;
  	}
 
  	.graphic:nth-child(even){
@@ -443,12 +477,28 @@ body{
  		margin-right:20px;
  	}
 
+ 	.graphic img{
+ 		width:330px;
+ 	}
+
  	.five-column{
- 		width:720px;
+ 		width:680px;
+ 	}
+
+ 	.four-column{
+ 		width:680px;
  	}
 
  	.three-column{
- 		width:350px;	
+ 		width:330px;	
+ 	}
+
+ 	.two-column{
+ 		width:330px;
+ 	}
+
+ 	.one-column{
+ 		width:155px;
  	}
 
  	/*input:nth-child(odd){
@@ -460,7 +510,21 @@ body{
  @media only screen and (min-width:320px) and (max-width:729px){
  	section{
  		width:350px;
- 		/*background:yellow;*/
+ 		background:yellow;
+ 		margin-left:auto;
+ 		margin-right:auto;
+
+ 	}
+
+ 	.wrapper{
+ 		width:350px;
+ 		background:red;
+ 		margin-left:auto;
+ 		margin-right:auto;
+ 	}
+
+ 	body{
+ 		background:blue;
  	}
 
  	h1{
@@ -469,6 +533,8 @@ body{
 
  	.main-nav{
  		width:350px;
+ 		background:orange;
+ 		margin-left:0px;
  		/*background:gray;*/
  	}
 
@@ -498,9 +564,9 @@ body{
  	}
 
  	h2{
- 		font-size:72px;
+ 		font-size:63px;
  		letter-spacing:-1px;
- 		line-height:63px;
+ 		line-height:56px;
  	}
  	input{
  		float:none;
@@ -514,6 +580,19 @@ body{
 
  	.making-process-step{
  		margin-left:0px;
+ 		width:330px;
+ 	}
+
+ 	.making-process-step img{
+ 		width:330px;
+ 	}
+
+ 	.image-break img{
+ 		width:100%;
+ 	}
+
+ 	.side-nav{
+ 		display:none;
  	}
  }
 
