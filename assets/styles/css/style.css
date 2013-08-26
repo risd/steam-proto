@@ -1,6 +1,7 @@
 body {
   margin: 0px; }
 
+/*= 01.general styles ================================================*/
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -54,6 +55,7 @@ body {
   to {
     text-transform: uppercase; } }
 
+/* 02. MAIN NAVIGATION =====================================*/
 .main-nav ul {
   /*background:yellow;*/
   margin-top: 0px;
@@ -75,6 +77,7 @@ body {
   color: #c8c8c8;
   border-bottom: 5px solid #c8c8c8; }
 
+/*03. SIDE NAVIGATION ====================================*/
 .side-nav {
   position: fixed;
   right: 10px;
@@ -103,17 +106,23 @@ body {
   height: 700px;
   background: gainsboro; }
 
+/* 04. GRID COLUMNS =======================================*/
+/*this is the section container that the grid is based from*/
+section {
+  width: 1090px;
+  margin: 0px auto;
+  position: relative;
+  display: block; }
+
 .one-column {
   width: 165px;
-  margin-right: 20px;
-  /*background:red;*/ }
+  margin-right: 20px; }
 
 .two-column {
   width: 350px; }
 
 .three-column {
-  width: 535px;
-  /*background:yellow;*/ }
+  width: 535px; }
 
 .four-column {
   width: 720px; }
@@ -121,12 +130,11 @@ body {
 .five-column {
   width: 905px; }
 
-section {
-  width: 1090px;
-  margin: 0px auto;
-  position: relative;
-  display: block; }
+/*this class moves things over a column*/
+.middle {
+  margin-left: 185px; }
 
+/*this is the big honkin' type for each section*/
 h2 {
   font-size: 200px;
   margin: 0px;
@@ -139,6 +147,7 @@ h2 {
   font-weight: 700;
   font-style: normal; }
 
+/*this is the next level down*/
 h3 {
   font-family: 'Mercury Display A', 'Mercury Display B';
   font-weight: 700;
@@ -146,12 +155,11 @@ h3 {
   margin: 0px;
   font-size: 32px; }
 
-.introduction {
-  position: absolute;
-  z-index: 2;
+/*this is a container to hold multiple paragraphs*/
+.body-text {
   border-top: 1px dotted black;
   border-bottom: 1px dotted black;
-  top: 280px; }
+  position: relative; }
 
 section div p {
   font-size: 22px;
@@ -161,16 +169,15 @@ section div p {
   font-weight: 400;
   font-style: normal; }
 
-.middle {
-  margin-left: 185px; }
+.introduction {
+  position: absolute;
+  z-index: 2;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  top: 280px; }
 
 #creativity-is-a-skill {
   margin-bottom: 200px; }
-
-.body-text {
-  border-top: 1px dotted black;
-  border-bottom: 1px dotted black;
-  position: relative; }
 
 #creativity-is-a-skill .body-text {
   margin-top: -60px;
@@ -226,10 +233,12 @@ section div p {
   height: 700px;
   background: #f0f0f0; }
 
+/*container for the news feed*/
 .news-feed {
   position: relative;
   z-index: 2; }
 
+/*type styling for a tweet*/
 .tweet {
   font-family: 'Mercury Display A', 'Mercury Display B';
   font-weight: 700;
@@ -258,6 +267,7 @@ section div p {
   margin-right: 0px;
   /*background:blue;*/ }
 
+/*04. FORM HOOPLA ===================================*/
 form {
   margin-bottom: 200px;
   margin-top: 80px; }
@@ -276,7 +286,7 @@ input {
 
 input:nth-child(odd) {
   /*background:green;*/
-  margin-right: 4px; }
+  margin-left: 15px; }
 
 label {
   display: block;
@@ -296,56 +306,16 @@ input[type=radio] {
   /*padding-top:20px;*/
   text-align: center; }
 
-/*@media only screen and (min-width:600px) and (max-width:1089px){
-
-	p{
-		color:red;
-	}
-	section{
-		width:720px;
-		background:rgb(220,220,220);
-	}
-
-	.main-nav{
-		width:100%;
-		background:green;
-	}
-
-	.middle{
-		margin-left:0px;
-		border:1px solid red;
-	}
-
-	.two-column{
-		width:32.110092%;
-		background:yellow;
-	}
-
-	.one-column{
-		width:15.137615%;
-		background:orange;
-	}
-
-	.three-column{
-		width:48.110092%;
-		background:rgb(250,250,250);
-	}
-
-	.making-process-step{
-		margin-left:0px;
-	}
- }*/
+/*first breakpoint*/
 @media only screen and (min-width: 730px) and (max-width: 1089px) {
   section {
     width: 720px;
     /*background:yellow;*/ }
 
   .main-nav {
-    /*background:gray;*/
     width: 720px; }
 
   .main-nav ul li:nth-child(4) {
-    /*background:yellow;*/
     margin-right: 0px; }
 
   .logo {

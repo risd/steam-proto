@@ -3,7 +3,8 @@ body{
 
 	}
 
-
+/*= 01.general styles ================================================*/
+	
 	.clearfix:before,
 		.clearfix:after {
 		    content: " ";
@@ -21,6 +22,7 @@ body{
 	.wrapper{
 		width:100%;
 		background:rgb(250,250,250);
+		
 
 	}
 
@@ -71,6 +73,8 @@ body{
 		}
 	}
 
+/* 02. MAIN NAVIGATION =====================================*/
+
 	.main-nav ul{
 		/*background:yellow;*/
 		margin-top:0px;
@@ -96,6 +100,8 @@ body{
 		color:rgb(200,200,200);
 		border-bottom:5px solid rgb(200,200,200);
 	}
+
+/*03. SIDE NAVIGATION ====================================*/
 
 	.side-nav{
 		position:fixed;
@@ -131,10 +137,19 @@ body{
 		background:rgb(220,220,220);
 	}
 
+/* 04. GRID COLUMNS =======================================*/
+	
+	/*this is the section container that the grid is based from*/
+	section{
+		width:1090px;
+		margin:0px auto;
+		position:relative;
+		display:block;
+	}
+	
 	.one-column{
 		width:165px;
 		margin-right:20px;
-		/*background:red;*/
 	}
 
 	.two-column{
@@ -143,7 +158,6 @@ body{
 
 	.three-column{
 		width:535px;
-		/*background:yellow;*/
 	}
 
 	.four-column{
@@ -154,15 +168,14 @@ body{
 		width:905px;
 	}
 
-	section{
-		width:1090px;
-		margin:0px auto;
-		position:relative;
-		display:block;
-		
+	/*this class moves things over a column*/
+	.middle{
+		margin-left:185px;
 	}
 
+	
 
+	/*this is the big honkin' type for each section*/
 	h2{
 		font-size:200px;
 		margin:0px;
@@ -174,13 +187,27 @@ body{
 		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
 	}
 
-h3{
-	font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
-		margin:0px;
-		font-size:32px;
-}
+	/*this is the next level down*/
+	h3{
+		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
+			margin:0px;
+			font-size:32px;
+	}
 	
+	/*this is a container to hold multiple paragraphs*/
+	.body-text{
+		border-top:1px dotted black;
+		border-bottom:1px dotted black;
+		position:relative;
+	}
 
+	section div p{
+		font-size:22px;
+		line-height:32px;
+		color:rgb(60,60,60);
+		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
+		
+	}
 	
 
 	.introduction{
@@ -191,34 +218,24 @@ h3{
 		top:280px;
 	}
 
-	section div p{
-		font-size:22px;
-		line-height:32px;
-		color:rgb(60,60,60);
-		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
-		
-	}
+	
 
-	.middle{
-		margin-left:185px;
-	}
+	
 
 	#creativity-is-a-skill{
 		margin-bottom:200px;
 
 	}
 
-	.body-text{
-		border-top:1px dotted black;
-		border-bottom:1px dotted black;
-		position:relative;
-	}
+	
 
 	#creativity-is-a-skill .body-text{
 		margin-top:-60px;
 		z-index:3;
 
 	}
+
+
 	.image-break{
 		margin-top:200px;
 		margin-bottom:200px;
@@ -279,12 +296,13 @@ h3{
 		background:rgb(240,240,240);
 	}
 
+	/*container for the news feed*/
 	.news-feed{
 		position:relative;
 		z-index:2;
 	}
 
-
+	/*type styling for a tweet*/
 	.tweet{
 		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
 		font-size:32px;
@@ -319,6 +337,7 @@ h3{
 
 	}
 
+/*04. FORM HOOPLA ===================================*/
 	form{
 		margin-bottom:200px;
 		margin-top:80px;
@@ -340,7 +359,7 @@ h3{
 
 	input:nth-child(odd){
 		/*background:green;*/
-		margin-right:4px;
+		margin-left:15px;
 	}
 
 	label{
@@ -366,46 +385,8 @@ h3{
 		text-align:center;
 	}
 
-/*@media only screen and (min-width:600px) and (max-width:1089px){
 
-	p{
-		color:red;
-	}
-	section{
-		width:720px;
-		background:rgb(220,220,220);
-	}
-
-	.main-nav{
-		width:100%;
-		background:green;
-	}
-
-	.middle{
-		margin-left:0px;
-		border:1px solid red;
-	}
-
-	.two-column{
-		width:32.110092%;
-		background:yellow;
-	}
-
-	.one-column{
-		width:15.137615%;
-		background:orange;
-	}
-
-	.three-column{
-		width:48.110092%;
-		background:rgb(250,250,250);
-	}
-
-	.making-process-step{
-		margin-left:0px;
-	}
- }*/
-
+/*first breakpoint*/
  @media only screen and (min-width:730px) and (max-width:1089px){
  	section{
  		width:720px;
@@ -413,12 +394,11 @@ h3{
  	}
 
  	.main-nav{
- 		/*background:gray;*/
+ 	
  		width:720px;
  	}
 
  	.main-nav ul li:nth-child(4){
- 		/*background:yellow;*/
  		margin-right:0px;
  	}
 
