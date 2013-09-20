@@ -240,8 +240,8 @@ h5.rotate-90 {
     -webkit-transform: scale(1.5); } }
 
 .image-break {
-  margin-top: 200px;
-  margin-bottom: 200px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
 .image-break img {
   max-width: 721px;
@@ -255,6 +255,9 @@ img.burst {
   /*z-index:1;*/ }
 
 /* - Sections  - - - - - - - - - - */
+#creativity-is-a-skill {
+  border: 20px solid #68e540; }
+
 #creativity-is-a-skill h2 {
   color: #68e540; }
 
@@ -294,10 +297,14 @@ img.burst {
   color: #69e640; }
 
 #take-action {
-  background: #657686; }
+  background: #657686;
+  border-top: 10px solid #ff607f; }
 
-#take-action h2 {
+#take-action h2, #take-action h3 {
   color: #fffbdb; }
+
+#take-action h3 {
+  -webkit-font-smoothing: antialiased; }
 
 #take-action.content p {
   color: #f0f0fa;
@@ -318,7 +325,8 @@ img.burst {
   color: #657686; }
 
 #tree-diagram {
-  background: none; }
+  background: none;
+  /*margin:0px auto;*/ }
 
 p.figure {
   float: left;
@@ -349,8 +357,10 @@ p.figure {
   margin-bottom: 0px; }
 
 .making-process-step img {
-  width: 389px;
-  height: 353px;
+  width: 369px;
+  /*height:353px;*/
+  border: 1px solid #c8c8c8;
+  padding: 10px;
   /*-webkit-filter:grayscale(1.0);*/ }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -360,7 +370,7 @@ p.figure {
   padding-bottom: 40px;
   position: relative;
   z-index: 2;
-  border-bottom: 20px solid rgba(30, 30, 30, 0.1); }
+  border-bottom: 2px solid rgba(30, 30, 30, 0.1); }
 
 .maker-profile-name {
   font-family: 'Mercury Display A', 'Mercury Display B';
@@ -393,6 +403,8 @@ p.maker-description {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .full-frame {
   max-width: 100%;
+  margin: 0px;
+  display: block;
   /*height:700px;*/
   background: #f0f0f0; }
 
@@ -452,7 +464,8 @@ input, label {
   font-weight: 400;
   font-style: normal;
   background: none;
-  -webkit-transition: all 0.2s ease-in-out; }
+  -webkit-transition: all 0.2s ease-in-out;
+  -webkit-font-smoothing: antialiased; }
 
 input:focus {
   background: #8399AA;
@@ -529,14 +542,20 @@ input[type="submit"]:hover {
   cursor: pointer;
   color: #657686; }
 
-.radio:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 4px;
-  background: red;
-  margin: 20px; }
+.radio {
+  /*background:yellow;*/
+  padding: 20px 0px 30px 0px;
+  border-top: 1px solid #506472;
+  border-bottom: 1px solid #506472; }
 
+/*.radio:after{
+	content:"";
+	display:inline-block;
+	width:100%;
+	height:4px;
+	background:red;
+	margin:20px 0px;
+}*/
 /*first breakpoint*/
 @media only screen and (min-width: 730px) and (max-width: 1070px) {
   .full-width {
