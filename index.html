@@ -92,12 +92,13 @@ title: STEAM
 			</div>
 		</section>
 
+	<img src="assets/img/students-working-cardboard.jpg" class="full-frame student-working"/>
 		
 
 	<section class="content" id="innovators">
 	
 		<section  class="full-width image-break">
-			<img id="making-image" src="assets/img/students-working-cardboard.jpg" class="middle"/>
+			<img id="making-image" src="assets/img/shapes/paper-texture.jpg" class="middle"/>
 		</section>
 
 		
@@ -110,20 +111,21 @@ title: STEAM
 			<h2>innovators are makers</h2>
 			<img src="assets/img/shapes/innovator-bg-3.jpg" class="burst full-frame"/>
 			<div class="maker-profile clearfix middle">
-				<img src="assets/img/profiles/david-hanson.jpg"/>
-				<h3 class="maker-profile-name">Firstname Lastname</h3>
+				<img src="assets/img/profiles/tina-roth-eisenberg.jpg"/>
+				
+				<h3 class="maker-profile-name">Tina Roth Eisenberg</h3>
 				<p class="maker-description three-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor eu nisl id lobortis. Phasellus id placerat lacus. Fusce sollicitudin et ligula dignissim euismod. Cras mattis semper tortor, ut pharetra magna molestie accumsan. Fusce aliquet hendrerit turpis, quis feugiat mi vestibulum id. Nunc pulvinar ultrices mauris, et tincidunt leo. Sed nulla magna, tempus vitae felis a, vestibulum rutrum magna</p>
 			</div>
 
 			<div class="maker-profile clearfix middle">
 				<img src="assets/img/profiles/danny-kim.jpg"/>
-				<h3 class="maker-profile-name">Firstname Lastname</h3>
+				<h3 class="maker-profile-name">Danny Kim</h3>
 				<p class="maker-description three-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor eu nisl id lobortis. Phasellus id placerat lacus. Fusce sollicitudin et ligula dignissim euismod. Cras mattis semper tortor, ut pharetra magna molestie accumsan. Fusce aliquet hendrerit turpis, quis feugiat mi vestibulum id. Nunc pulvinar ultrices mauris, et tincidunt leo. Sed nulla magna, tempus vitae felis a, vestibulum rutrum magna</p>
 			</div>
 
 			<div class="maker-profile clearfix middle">
-				<img src="#"/>
-				<h3 class="maker-profile-name">Firstname Lastname</h3>
+				<img src="assets/img/profiles/david-hanson.jpg"/>
+				<h3 class="maker-profile-name">David Hanson</h3>
 				<p class="maker-description three-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor eu nisl id lobortis. Phasellus id placerat lacus. Fusce sollicitudin et ligula dignissim euismod. Cras mattis semper tortor, ut pharetra magna molestie accumsan. Fusce aliquet hendrerit turpis, quis feugiat mi vestibulum id. Nunc pulvinar ultrices mauris, et tincidunt leo. Sed nulla magna, tempus vitae felis a, vestibulum rutrum magna</p>
 			</div>
 		</div>
@@ -205,7 +207,7 @@ title: STEAM
 
 		<section class="content" id="take-action">
 			<div class="grid full-width">
-			<h2>Take action</h2>
+			<h2>take <br/>action</h2>
 			<img src="assets/img/shapes/painted-rings-1.png" class="burst full-frame"/>
 			<div class="body-text four-column middle">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -225,7 +227,7 @@ title: STEAM
 				<input class="two-column" type="url" name="website" placeholder="website">
 				<p>I work in the following area</p>
 				
-				<div class="button-group one-column">
+				<!-- <div class="button-group one-column">
   					<label for="education">education</label>  
   			    	<input id="education" type="radio" name="category" value="education">
   			    </div>  
@@ -243,8 +245,23 @@ title: STEAM
 			    <div class="button-group one-column">
 				    <label for="policy">policy</label> 
 				    <input id="policy" type="radio" name="category" value="policy">  
-				</div>
+				</div> -->
 
+				<div class="radio clearfix">
+					
+					<input id="education-btn" type="radio" name="category" value="education">
+					<label for="education-btn" class="one-column">Education</label>
+					
+					<input id="research-btn" type="radio" name="category" value="research">
+					<label for="research-btn" class="one-column">Research</label>
+
+					<input id="industry-btn" type="radio" name="category" value="industry">
+					<label for="industry-btn" class="one-column">Industry</label>
+
+					<input id="policy-btn" type="radio" name="category" value="policy">
+					<label for="policy-btn" class="one-column">Policy</label>
+				</div>
+				<input id="submit-btn" class="two-column" type="submit" value="Join the Movement"/>
 			</form>
 			</div>
 
