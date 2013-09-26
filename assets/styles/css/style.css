@@ -254,6 +254,9 @@ img.burst {
   opacity: 0.4;
   /*z-index:1;*/ }
 
+img.clear {
+  background: transparent; }
+
 /* - Sections  - - - - - - - - - - */
 #creativity-is-a-skill {
   border: 20px solid #68e540; }
