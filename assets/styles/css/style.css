@@ -155,26 +155,31 @@ img {
 
 /*this is the big honkin' type for each section*/
 h2 {
-  font-size: 200px;
+  font-size: 250px;
   margin: 0px;
-  line-height: 160px;
-  letter-spacing: -6px;
+  line-height: 200px;
+  letter-spacing: -3px;
   color: #e6e6e6;
   position: relative;
   -webkit-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
+  /*	-webkit-font-smoothing:antialiased;*/
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
-  font-family: 'Mercury Display A', 'Mercury Display B';
-  font-weight: 700;
-  font-style: normal; }
+  /*font-family: 'Knockout 27 A', 'Knockout 27 B'; font-weight: 400; font-style: normal;*/
+  /*
+  	font-family: 'Tungsten A', 'Tungsten B'; font-weight: 600; font-style: normal;*/
+  /*	font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;*/
+  font-family: "Antenna Comp Medium";
+  font-style: normal;
+  font-weight: normal; }
 
 h2.blog-feed {
   font-size: 100px;
   line-height: 100px;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   color: #fffcdb; }
 
 /*this is the next level down*/
@@ -213,6 +218,9 @@ div.case-study,
 div.video {
   /*	z-index: 3; */ }
 
+div.event {
+  background: red; }
+
 h5.rotate-90 {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -230,7 +238,7 @@ h5.rotate-90 {
 .image-block {
   /*background:yellow;*/
   position: relative;
-  margin-top: -60px;
+  margin-top: 10px;
   margin-bottom: 20px;
   z-index: 2;
   text-align: center; }
