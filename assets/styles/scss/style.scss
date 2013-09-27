@@ -41,9 +41,7 @@ body{
 		width:1090px;
 		/*background:rgb(220,220,220);*/
 		margin:0px auto;
-		 font-family: Nitti;
-  font-style: normal;
-  font-weight: normal;
+		font-family:courier;
 		position:fixed;
 		z-index:10;
 	}
@@ -202,7 +200,7 @@ body{
 		font-size:200px;
 		margin:0px;
 		line-height:160px;
-		letter-spacing:-2px;
+		letter-spacing:-6px;
 		color:rgb(230,230,230);
 		position:relative;
 		-webkit-text-rendering: optimizeLegibility;
@@ -211,22 +209,9 @@ body{
 		margin-left:auto;
 		margin-right:auto;
 		z-index:1;
-		/*font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;*/
-		/*font-family: 'Knockout 27 A', 'Knockout 27 B'; font-weight: 400; font-style: normal;*/
-		/*font-family: 'Tungsten Comp A', 'Tungsten Comp B'; font-weight: 500; font-style: normal;*/
-		font-family: "Antenna Comp Medium";
-		font-style: normal;
-		font-weight: normal;
+		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
 	}
 
-
-
-
-	.antennacompbold {
-  font-family: "Antenna Comp";
-  font-style: normal;
-  font-weight: bold;
-}
 
 	h2.blog-feed{
 		font-size:100px;
@@ -254,8 +239,8 @@ body{
 	}
 
 	.content p{
-		font-size:19px;
-		line-height:27px;
+		font-size:22px;
+		line-height:32px;
 		color:rgb(60,60,60);
 		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 400; font-style: normal;
 		-webkit-text-rendering: optimizeLegibility;
