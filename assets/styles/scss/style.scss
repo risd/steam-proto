@@ -145,7 +145,9 @@ body{
 	.header-image{
 		width:100%;
 		height:700px;
-		background:rgb(220,220,220);
+		background:url('../../img/steam-sketch.jpg');
+		-webkit-background-size:cover;
+		background-position:-20px 0px;
 		position:relative;
 		z-index:2;
 	}
@@ -208,6 +210,14 @@ body{
 		margin-right:auto;
 		z-index:1;
 		font-family: 'Mercury Display A', 'Mercury Display B'; font-weight: 700; font-style: normal;
+	}
+
+
+	h2.blog-feed{
+		font-size:100px;
+		line-height:100px;
+		letter-spacing:-2px;
+		color:rgb(255,252,219);
 	}
 
 	/*this is the next level down*/
@@ -319,6 +329,13 @@ body{
 /* - Sections  - - - - - - - - - - */
 	
 
+	#latest-greatest{
+		/*background:rgb(38,179,241);*/
+		background:url('../../img/steam-sketch-blue.jpg');
+		-webkit-background-size:cover;
+		background-position:-60px 0px;
+	}
+
 
 	#creativity-is-a-skill{
 		border:20px solid rgb(104,229,64);
@@ -335,6 +352,10 @@ body{
 
 	}
 
+	.news-blurb{
+		margin:20px auto;
+		background:yellow;
+	}
 
 	#making-process h2{
 		color:rgb(242,255,255);
