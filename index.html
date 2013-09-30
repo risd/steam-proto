@@ -908,7 +908,7 @@ title: STEAM
 			
 			<div class="grid full-width">
 				
-				<h2>It's happening everywhere.</h2>
+				<h2 class="happening-title">It's happening everywhere.</h2>
 				<img src="{{site.siteurl}}/assets/img/shapes/painted-burst.jpg" class="burst full-frame"/>
 				<div class="news-feed">
 					<div class="single-tweet four-column middle">
@@ -977,10 +977,13 @@ title: STEAM
 			<h2>take <br/>action</h2>
 			<img src="{{site.siteurl}}/assets/img/shapes/painted-rings-1.png" class="burst full-frame"/>
 			<div class="body-text four-column middle">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>STEAM is a movement, championed by the Rhode Island School of Design, that
+
+argues that an art and design education will produce the creativity and innovation  
+
+that will keep America competitive in this century. STEM (Science, Technology, 
+
+Engineering and Math + Arts = STEAM).</p>
 			</div>
 
 			<form class="four-column middle">
@@ -1051,6 +1054,7 @@ title: STEAM
 		<script>
 			 $(document).ready(function() {
 			    $(".innovation-title").lettering();
+			    $(".happening-title").lettering();
 			    $(window).scroll(function(){
 			    	if($(window).scrollTop()>750){
 			    		$(".innovation-title").addClass("revealed");

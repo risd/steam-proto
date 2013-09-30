@@ -419,6 +419,26 @@ body{
 
 	}
 
+	/* - - Innovation Title - - - - - - - - */
+
+	.innovation-title .char3{
+		letter-spacing:0px;
+	}
+
+	.innovation-title .char4{
+		letter-spacing: -1px;
+	}
+
+	.innovation-title .char9{
+		letter-spacing: 0px;
+	}
+
+	.innovation-title .char15{
+		letter-spacing: 1px;
+	}
+
+
+
 	.innovation-title .char27{
 	
 		letter-spacing: -100px;
@@ -426,6 +446,8 @@ body{
 		-webkit-transition: letter-spacing 1s ease-in-out,
 							opacity 1s ease-in 1s;
 	}
+
+
 
 	/*.innovation-title:hover .char27{
 		letter-spacing:-2px;
@@ -587,6 +609,26 @@ body{
 		background:rgb(255,251,219);
 		
 	}
+
+	/*- -Happening title - - - - - -*/
+
+	.happening-title .char9{
+		letter-spacing: 0px;
+	}
+
+	.happening-title .char10{
+		letter-spacing: -1px;
+	}
+
+	.happening-title .char19{
+		letter-spacing: 1px;
+	}
+
+	.happening-title .char20{
+		letter-spacing: 1px;
+	}
+
+
 
 	#happening h2{
 		color:$green;

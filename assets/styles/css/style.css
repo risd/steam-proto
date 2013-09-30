@@ -322,6 +322,19 @@ img.clear {
   /*margin-top:-60px;*/
   z-index: 3; }
 
+/* - - Innovation Title - - - - - - - - */
+.innovation-title .char3 {
+  letter-spacing: 0px; }
+
+.innovation-title .char4 {
+  letter-spacing: -1px; }
+
+.innovation-title .char9 {
+  letter-spacing: 0px; }
+
+.innovation-title .char15 {
+  letter-spacing: 1px; }
+
 .innovation-title .char27 {
   letter-spacing: -100px;
   opacity: 0.0;
@@ -443,6 +456,19 @@ a.nav-up, a.nav-down {
 
 #happening {
   background: #fffbdb; }
+
+/*- -Happening title - - - - - -*/
+.happening-title .char9 {
+  letter-spacing: 0px; }
+
+.happening-title .char10 {
+  letter-spacing: -1px; }
+
+.happening-title .char19 {
+  letter-spacing: 1px; }
+
+.happening-title .char20 {
+  letter-spacing: 1px; }
 
 #happening h2 {
   color: #68e540; }
