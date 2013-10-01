@@ -618,7 +618,7 @@ body{
 	
 		letter-spacing: -100px;
 		opacity:0.0;
-		-webkit-transition: letter-spacing 1s ease-in-out,
+		-webkit-transition: letter-spacing 1.5s cubic-bezier(.48,.01,.2,1),
 							opacity 1s ease-in 1s;
 	}
 

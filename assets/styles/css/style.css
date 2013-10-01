@@ -469,7 +469,7 @@ img.clear {
 .innovation-title .char27 {
   letter-spacing: -100px;
   opacity: 0.0;
-  -webkit-transition: letter-spacing 1s ease-in-out, opacity 1s ease-in 1s; }
+  -webkit-transition: letter-spacing 1.5s cubic-bezier(0.48, 0.01, 0.2, 1), opacity 1s ease-in 1s; }
 
 /*.innovation-title:hover .char27{
 	letter-spacing:-2px;
