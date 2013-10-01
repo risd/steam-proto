@@ -133,6 +133,27 @@ body{
 
 	}
 
+	.side-nav a:hover:before{
+		position:absolute;
+		
+		top:-2px;
+		font-family:courier;
+		font-size:10px;
+		letter-spacing: 1px;
+		color:black;
+	}
+
+	 a#creativity:hover:before{
+		content:"introduction";
+		left:-90px;
+	}
+
+	a#education:hover:before{
+		content:"creativity";
+		left:-90px;
+		top:30px;
+	}
+
 	.main-nav ul li a:hover{
 		color:rgb(200,200,200);
 		border-bottom:5px solid rgb(200,200,200);
@@ -749,8 +770,8 @@ body{
 		width:350px;
 		height:350px;
 		overflow:hidden;
-		-webkit-transition: all 0.4s ease-in-out;
-		
+		/*-webkit-transition: all 0.5s cubic-bezier(.48,.01,.2,1);
+		*/
 	}
 
 	.news-blurb .date{
@@ -760,7 +781,7 @@ body{
 	.news-blurb article:first-child{
 		margin-bottom:150px;
 		margin-top:120px;
-		-webkit-transition:all 0.3s ease-in-out;
+		-webkit-transition:all .5s cubic-bezier(.48,.01,.2,1);
 	}
 
 	.news-blurb:hover article:first-child{
@@ -778,8 +799,9 @@ body{
 
 
 	#art-is-education{
-		border-top:1px solid $blue;
-		border-bottom:1px solid $blue;
+		border:20px solid $blue;
+		/*border-top:1px solid $blue;*/
+		/*border-bottom:1px solid $blue;*/
 		background:url('../../img/shapes/grid-pattern.png');
 	}
 
@@ -794,6 +816,7 @@ body{
 
 	#innovators{
 		background:$purple;
+		border:20px solid $pink;
 		
 
 	}
@@ -1388,11 +1411,6 @@ body{
  }
 
 
-/*hfj test*/
 
-.font-test h1{
-	font-family: 'Knockout 27 A', 'Knockout 27 B'; font-weight: 400; font-style: normal;
-	margin-left:100px;
-	font-size:48px;
-}
+
 
