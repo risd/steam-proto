@@ -833,7 +833,7 @@ title: STEAM
 
 		<section id="art-is-education" class="content">
 			<div class="grid full-width">
-				<h2 class="five-column">Creativity <br/>is a skill.</h2>
+				<h2 class="five-column creativity-title">Creativity <br/>is a skill.</h2>
 				<div class="body-text four-column middle">
 					<p>The problem-solving, the fearlessness, and the critical thinking and making skills 
 						that define an art and design education fosters the creativity that will keep our
@@ -1055,10 +1055,19 @@ Engineering and Math + Arts = STEAM).</p>
 			 $(document).ready(function() {
 			    $(".innovation-title").lettering();
 			    $(".happening-title").lettering();
+			    $(".creativity-title").lettering();
 			    $(window).scroll(function(){
 			    	if($(window).scrollTop()>750){
 			    		$(".innovation-title").addClass("revealed");
-			    		$("#shapes").addClass("revealed");
+			    		
+
+			    	}
+			    });
+			     $(window).scroll(function(){
+			    	if($(window).scrollTop()>4550){
+			    		// $(".creativity-title").css("opacity","0.2");
+			    		$(".creativity-title").addClass("clean");
+
 			    	}
 			    });
 			  
