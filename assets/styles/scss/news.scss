@@ -1,0 +1,239 @@
+/*
+-- SHARED NEWS STYLES -------------------------
+
+-----------------------------------------------
+*/
+
+	p.post-date, p.filter-type, ul.sharing li, .filters ul li{
+		font-family:courier;
+		font-size:14px;
+		line-height:14px;
+	}
+	
+	p.post-date{
+		display:block;
+		float:left;
+		text-align: center;
+		margin-top:100px;
+	}
+
+	.post{
+		float:left;
+	}
+
+	.tweet h3, .link h3{
+		font-size:48px;
+		line-height:53px;
+		letter-spacing: -1px;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
+
+
+/*
+-- EVENT --------------------------------------
+
+-----------------------------------------------
+*/
+	.event{
+		background:$cream;
+		padding-bottom:80px;
+	}
+
+	.event h3{
+		color:$slate;
+	}
+
+	.event .filter-type{
+		color:$orange;
+	}
+
+	.event .post-date{
+		color:$slate;
+	}
+
+	.event ul li{
+		color:$orange;
+	}
+
+
+
+/*
+-- LINK --------------------------------------
+
+-----------------------------------------------
+*/
+
+	.link{
+		background:$blue;
+		padding:20px 0px 60px 0px;
+		border-bottom:1px solid $blue-dark;
+	}
+
+	.link .post-date{
+		margin-top:20px;
+	}
+
+	.link .post-date:before{
+		content:url("../../img/shapes/link-before.svg");
+		width:100%;
+		margin-bottom:20px;
+		display:block;
+		/*height:100px;*/
+	}
+
+	.link .filter-type, .link .post-date{
+		color:white;
+	}
+
+	.link h4{
+		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 300; font-style: normal;
+		font-size:22px;
+		margin:8px 0px 8px 0px;
+	}
+
+	.link a:link, .link a:visited{
+		color:white;
+		text-decoration:none;
+	}
+
+	.link ul li{
+		color:$blue-dark;
+	}
+
+/*
+-- TWEET --------------------------------------
+
+-----------------------------------------------
+*/
+
+	.tweet{
+		background:url("../../img/shapes/grid-pattern.png");
+		padding:20px 0px 60px 0px;
+	}
+
+	.tweet ul li{
+		color:rgb(190,190,190);
+	}
+
+	.tweet .filter-type{
+		color:$pink;
+	}
+
+	.tweet .post-date{
+		background:url("../../img/shapes/tweet-date.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top:0px;
+		height:164px;
+		padding-top:120px;
+	}
+
+	.tweet h3{
+		color:$slate;
+	}
+
+
+
+
+/*
+-- FEATURE ------------------------------------
+
+-----------------------------------------------
+*/
+
+	.feature{
+		background:$green-tint;
+		
+	}
+
+	.feature .filter-type, .feature ul li{
+		color:$green;
+	}
+
+	.feature-title-container{
+		position:relative;
+	}
+	.feature .feature-title{
+		color:white;
+		height:85%%;
+		width:100%;
+		/*background:red;*/
+		padding-top:10%;
+		top:0px;
+		position:absolute;
+		text-align: center;
+		z-index:10;
+	}
+
+	.feature-img{
+		position:relative;
+		-webkit-filter:brightness(87%) grayscale(0.2);
+		z-index:1;
+	}
+
+	.feature .post-date{
+		color:$slate;
+	}
+
+/*
+-- SOCIAL -------------------------------------
+	
+-----------------------------------------------
+*/
+
+	ul.sharing{
+		list-style:none;
+		padding:0px;
+	}
+
+
+	ul.sharing li{
+		float:left;
+
+	}
+
+	ul.sharing li.icon{
+		font-family: "ModernPictograms";
+		font-size:24px;
+		margin-left:3px;
+	}
+
+
+
+/*
+-- NEWS NAVIAGION -----------------------------
+
+-----------------------------------------------
+*/
+
+
+nav.filters{
+		background:red;
+	
+	}
+
+	nav.filters ul{
+		/*background:yellow;*/
+		position:fixed;
+		list-style:none;
+		padding:0px;
+		margin-left:925px;
+		top:200px;
+		/*right:0px;*/
+	}
+
+	.filters ul li a:link{
+		/*margin-bottom:10px;*/
+		font-weight:bold;
+		padding:6px;
+		text-align: left;
+		display:block;
+		letter-spacing: 1px;
+	}
+
+	.filters ul li a:hover{
+		border:1px solid black;
+		
+	}
