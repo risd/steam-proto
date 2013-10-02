@@ -21,7 +21,35 @@ title: STEAM
 		
 	<!-- e: event -->
 
+		<nav class="filters full-width">
+			<ul class="one-column">
+				<li>filter:</li>
+				<li><a href="#">events</a></li>
+				<li><a href="#">tweets</a></li>
+				<li><a href="#">links</a></li>
+				<li><a href="#">features</a></li>
+			</ul>
 
+		</nav>
+
+		<section class="content event">
+			<div class="grid full-width four-column clearfix">
+				<p class="post-date  one-column">Sept. 14 2013</p>
+				<div class="post clearfix three-column">
+					<p class="filter-type ">event</p>
+					<h3>Pelosi and Maeda Talk STEAM</h3>
+					<img src="{{site.siteurl}}/assets/img/pelosi-maeda.jpg" class="three-column">
+					<p>At the January 2013 World Economic Forum in Davos, Switzerland, RISD President John Maeda participated in Stem + Art = STEAM, a panel session addressing the ways Art + Design can assist Science, Technology, Engineering and Math (STEM) in unleashing entrepreneurial innovation.</p>
+					<p>Hal B. Gregersen, The Abu Dhabi Commercial Bank Chaired Professor of Innovation and Leadership at INSEAD, moderated the discussion on the value of integrating Art + Design into the STEM subjects. “If we get science, technology, engineering and math folks into the same room with artists and designers and we have them actively do something—that is the best lubricant for the conversation.” <a href="">&gt;&gt; read more</a> </p>
+					<ul class="sharing clear-fix">
+						<li>share:</li>
+						<li class="icon">t</li>
+						<li class="icon">F</li>
+						<li class="icon">Å</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
 		<section class="content tweet">
 			<div class="grid full-width four-column clearfix">
@@ -46,7 +74,7 @@ title: STEAM
 				<div class="post clearfix three-column">
 					<p class="filter-type ">event</p>
 					<h3>2013 World Economic Forum</h3>
-					<img src="{{site.siteurl}}/assets/img/steam-event-01.jpg">
+					<img src="{{site.siteurl}}/assets/img/steam-event-01.jpg" class="three-column">
 					<p>At the January 2013 World Economic Forum in Davos, Switzerland, RISD President John Maeda participated in Stem + Art = STEAM, a panel session addressing the ways Art + Design can assist Science, Technology, Engineering and Math (STEM) in unleashing entrepreneurial innovation.</p>
 					<p>Hal B. Gregersen, The Abu Dhabi Commercial Bank Chaired Professor of Innovation and Leadership at INSEAD, moderated the discussion on the value of integrating Art + Design into the STEM subjects. “If we get science, technology, engineering and math folks into the same room with artists and designers and we have them actively do something—that is the best lubricant for the conversation.” <a href="">&gt;&gt; read more</a> </p>
 					<ul class="sharing clear-fix">
@@ -57,8 +85,6 @@ title: STEAM
 					</ul>
 				</div>
 			</div>
-		
-
 		</section>
 
 		<section class="content tweet">
@@ -124,7 +150,7 @@ title: STEAM
 
 	<section class="content feature">
 			<div class="feature-title-container full-width">
-				<img src="#" class="feature-img full-width"/>
+				<img src="{{site.siteurl}}/assets/img/elmo.jpg" class="feature-img full-width"/>
 				<h2 class="feature-title five-column">Sesame Street + STEAM</h2>
 			</div>
 			<div class="grid full-width four-column clearfix">
@@ -162,6 +188,59 @@ title: STEAM
 			</div>
 		</section>
 
+
+		<section class="content feature">
+			<div class="feature-title-container full-width">
+				<img src="{{site.siteurl}}/assets/img/drew-charter-school.jpg" class="feature-img full-width"/>
+				<h2 class="feature-title five-column">Drew Charter School</h2>
+			</div>
+			<div class="grid full-width four-column clearfix">
+				<p class="post-date one-column">Sept. 14 2013</p>
+				<div class="post clearfix three-column">
+					<p class="filter-type ">feature</p>
+					
+					<p>Named the 2012 Georgia Charter School of the Year, Drew Charter School in Atlanta is a K-8 school with a curriculum focus on STEAM and a strong foundation of literacy. Drew Charter School utilizes a team teaching approach that allows teachers to know all students as individuals and to collaborate across disciplines.</p>
+
+					<p>Drew’s STEAM focus has yielded continued improvement in test scores and student success: Drew students exceed the Georgia and Atlanta public school averages in Reading, Language Arts, Math, Social Studies and Science. The school’s educational approach is framed around four guiding principles:</p>
+					<ul class="sharing clear-fix">
+						<li>share:</li>
+						<li class="icon">t</li>
+						<li class="icon">F</li>
+						<li class="icon">Å</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<script>
+		d3.selectAll(".content").each(function(){console.log(d3.select(this).style("height"))})
+
+		d3.selectAll(".content")
+			.each(instrument)
+
+
+			addition(2,3);
+
+			var instrument = function (){}
+
+			function bonkersSax(){}
+
+			function bonkersTrumpet(){}
+
+			function addition(x,y){
+				return {
+					added : x + y,
+					first : x,
+					second: y 
+
+				};
+
+
+			}
+
+			function(color){}
+
+
+		</script>
 
 	
 

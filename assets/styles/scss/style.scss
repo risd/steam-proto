@@ -313,8 +313,37 @@ body{
 	/*	z-index: 3; */
 	} 
 
+	nav.filters{
+		background:red;
+	
+	}
+
+	nav.filters ul{
+		/*background:yellow;*/
+		position:fixed;
+		list-style:none;
+		padding:0px;
+		margin-left:925px;
+		top:200px;
+		/*right:0px;*/
+	}
+
+	.filters ul li a:link{
+		/*margin-bottom:10px;*/
+		font-weight:bold;
+		padding:6px;
+		text-align: left;
+		display:block;
+		letter-spacing: 1px;
+	}
+
+	.filters ul li a:hover{
+		border:1px solid black;
+		
+	}
+
 	ul.sharing{
-		background:yellow;
+		/*background:yellow;*/
 		list-style:none;
 		padding:0px;
 	}
@@ -358,7 +387,7 @@ body{
 		color:$slate;
 	}
 
-	p.post-date, p.filter-type, ul.sharing li{
+	p.post-date, p.filter-type, ul.sharing li, .filters ul li{
 		font-family:courier;
 		font-size:14px;
 		line-height:14px;
@@ -477,7 +506,8 @@ body{
 
 	.feature-img{
 		position:relative;
-		height:700px;
+		/*height:700px;*/
+		-webkit-filter:brightness(87%) grayscale(0.2);
 		z-index:1;
 	}
 
@@ -592,7 +622,7 @@ body{
 
 
 	#creativity-is-a-skill{
-		border:20px solid $slate;
+		border:20px solid white;
 		background:$green;
 		padding-bottom:250px;
 	}
@@ -914,9 +944,10 @@ body{
 	}
 
 	#making-process{
-		padding-top:100px;
+		padding-top:220px;
 		padding-bottom:160px;
-		background-color:rgb(248,248,248);
+		margin-top:-188px;
+		background-color:white;
 		background-image:url('../../img/shapes/bucky-bg.png'),
 						 url('../../img/shapes/bucky-slices.png');
 		background-repeat:no-repeat;

@@ -241,8 +241,31 @@ div.case-study,
 div.video {
   /*	z-index: 3; */ }
 
+nav.filters {
+  background: red; }
+
+nav.filters ul {
+  /*background:yellow;*/
+  position: fixed;
+  list-style: none;
+  padding: 0px;
+  margin-left: 925px;
+  top: 200px;
+  /*right:0px;*/ }
+
+.filters ul li a:link {
+  /*margin-bottom:10px;*/
+  font-weight: bold;
+  padding: 6px;
+  text-align: left;
+  display: block;
+  letter-spacing: 1px; }
+
+.filters ul li a:hover {
+  border: 1px solid black; }
+
 ul.sharing {
-  background: yellow;
+  /*background:yellow;*/
   list-style: none;
   padding: 0px; }
 
@@ -271,7 +294,7 @@ ul.sharing li.icon {
 .event h3 {
   color: #657686; }
 
-p.post-date, p.filter-type, ul.sharing li {
+p.post-date, p.filter-type, ul.sharing li, .filters ul li {
   font-family: courier;
   font-size: 14px;
   line-height: 14px; }
@@ -367,7 +390,8 @@ p.post-date {
 
 .feature-img {
   position: relative;
-  height: 700px;
+  /*height:700px;*/
+  -webkit-filter: brightness(87%) grayscale(0.2);
   z-index: 1; }
 
 .feature .post-date {
@@ -455,7 +479,7 @@ img.clear {
   height:100%;*/ }
 
 #creativity-is-a-skill {
-  border: 20px solid #657686;
+  border: 20px solid white;
   background: #68e540;
   padding-bottom: 250px; }
 
@@ -687,9 +711,10 @@ p.figure {
   color: #657686; }
 
 #making-process {
-  padding-top: 100px;
+  padding-top: 220px;
   padding-bottom: 160px;
-  background-color: #f8f8f8;
+  margin-top: -188px;
+  background-color: white;
   background-image: url("../../img/shapes/bucky-bg.png"), url("../../img/shapes/bucky-slices.png");
   background-repeat: no-repeat;
   background-position: -2% 600px, 85% 900px;
