@@ -27,7 +27,7 @@ input {
 
 input:nth-child(odd) {
   /*background:green;*/
-  margin-left: 15px; }
+  /*margin-left:15px;*/ }
 
 .button-group {
   float: left;
@@ -78,7 +78,7 @@ input[type="submit"] {
   background: none;
   border: 1px solid white;
   -webkit-font-smoothing: antialiased;
-  margin: 40px auto;
+  margin-top: 40px;
   display: block; }
 
 input[type="submit"]:hover {

@@ -41,10 +41,8 @@ body {
   z-index: 10; }
 
 .main-nav {
-  width: 1090px;
   margin: 0px auto;
   font-family: courier;
-  position: fixed;
   z-index: 10; }
 
 .logo {
@@ -54,7 +52,7 @@ body {
   font-size: 36px;
   padding-left: 55px;
   padding-right: 40px;
-  position: fixed;
+  /*position:fixed;*/
   z-index: 1; }
 
 .main-nav ul {
@@ -82,28 +80,137 @@ body {
 	Initial values for the grid
 --------------------------------------------------------------------
 */
+.grid-test {
+  background: rgba(200, 200, 200, 0.3) !important;
+  color: rgba(150, 150, 150, 0.5);
+  padding: 20px 0px;
+  font-family: helvetica;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  -webkit-transition: color 0.2s ease-in-out; }
+
+.grid-test:hover {
+  color: rgba(150, 150, 150, 0.9); }
+
 /*this is the section container that the grid is based from*/
 .full-width {
   width: 1090px;
+  /*max-width:1200px;*/
+  /*min-width:90%;
+  max-width:95%;*/
   margin: 0px auto;
   position: relative;
   display: block; }
 
 .one-column {
-  width: 165px;
-  margin-right: 20px; }
+  float: left;
+  position: relative;
+  width: 15.137614678899%;
+  /* 165 pixels  164.9999999999991*/
+  margin-right: 1.834862385321%;
+  /* 20 pixels  */ }
 
+/* 
+	Two Column Styles | |  
+*/
 .two-column {
-  width: 350px; }
+  float: left;
+  width: 32.110091743119%;
+  margin-right: 1.834862385321%;
+  /* 349.9999999999971 pixels */ }
 
+.two-column-one {
+  float: left;
+  width: 47.142857142857%;
+  margin-right: 5.71429%; }
+
+.two-column-two {
+  width: 100%;
+  float: left; }
+
+/* 
+	Three Column Styles | | |  
+*/
 .three-column {
-  width: 535px; }
+  float: left;
+  width: 49.082568807339%;
+  margin-right: 1.834862385321%;
+  /* 535 pixels 534.9999999999951 */ }
 
+.three-column-one {
+  background: red;
+  float: left;
+  width: 30.841121495327%;
+  margin-right: 3.738317757009%;
+  /* */ }
+
+.three-column-two {
+  width: 65.420560747664%;
+  float: left;
+  margin-right: 3.738317757009%; }
+
+.three-column-three {
+  width: 100%; }
+
+/* 
+	Four Column Styles | | | |  
+*/
 .four-column {
-  width: 720px; }
+  width: 66.005504587156%;
+  margin-right: 1.834862385321%;
+  float: left;
+  /* 719.4600000000004 pixels */ }
 
+.four-column .offset-one {
+  margin-left: 25.679862674784%; }
+
+.four-column-one {
+  float: left;
+  width: 22.9%;
+  margin-right: 2.779862674784%; }
+
+.four-column-two {
+  float: left;
+  width: 48.611111111111%;
+  margin-right: 2.779862674784%; }
+
+.four-column-three {
+  float: left;
+  width: 74.3%;
+  margin-right: 2.779862674784%; }
+
+.four-column-four {
+  width: 100%;
+  margin-right: 0%;
+  float: left; }
+
+/* 
+	Five Column Styles | | | | |  
+*/
 .five-column {
-  width: 905px; }
+  width: 83.02752293578%;
+  margin-right: 1.834862385321%;
+  float: left; }
+
+/* 
+	Six Column Styles | | | | | |
+*/
+.six-column {
+  width: 100%;
+  float: left; }
+
+/* 
+	Six Column Styles | | | | | |
+*/
+.offset-one {
+  margin-left: 16.97247706422%; }
+
+.offset-two {
+  margin-left: 33.94495412844%; }
+
+.offset-three {
+  margin-left: 50.917431192661%; }
 
 /*this class moves things over a column*/
 .middle {
@@ -118,6 +225,9 @@ body {
   margin: 0px;
   display: block;
   background: #f0f0f0; }
+
+.omega {
+  margin-right: 0%; }
 
 /*
 -- TYPOGRPHAY -----------------------------------------------------
