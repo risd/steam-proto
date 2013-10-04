@@ -382,7 +382,7 @@ h3, .content p.tweet {
   margin-left: 43px;
   margin-right: 64px;
   width: 262px;
-  height: 218px;
+  /*height:218px;*/
   -webkit-filter: grayscale(1) brightness(85%) contrast(80%); }
 
 .maker-profile img:hover {
@@ -455,6 +455,19 @@ p.figure {
   font-family: baskerville;
   font-style: italic;
   color: #657686; }
+
+	/*
+	--INFO GRAPHICS----------------------------------------
+
+	-------------------------------------------------------
+	*/
+.graphic img {
+  width: 100%;
+  height: 350px; }
+
+.graphic:nth-child(3n+3) {
+  margin-right: 0px;
+  /*background:blue;*/ }
 
 /*
 ---- ANIMATED TITLES --------------------------------------
@@ -903,7 +916,7 @@ nav.filters ul {
 .filters ul li a:hover {
   border: 1px solid black; }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   .title-illustration {
     display: none; }
 
@@ -914,6 +927,10 @@ nav.filters ul {
     position: relative;
     /*background:green;*/ }
 
+  .border .full-width {
+    width: 84.125%;
+    max-width: 84.125%; }
+
   .one-column {
     background: yellow;
     width: 22.948328267477%;
@@ -922,7 +939,13 @@ nav.filters ul {
     position: relative; }
 
   .two-column {
-    background: rgba(180, 180, 180, 0.3); }
+    background: rgba(180, 180, 180, 0.3);
+    width: 48.632218844985%;
+    margin-right: 2.73556231003%; }
+
+  .three-column {
+    width: 74.316109422492%;
+    margin-right: 0%; }
 
   .offset-one {
     margin-left: 0%; }
@@ -958,21 +981,144 @@ nav.filters ul {
 
   .main-nav ul li:last-child {
     margin-right: 0px;
-    background: red; } }
+    background: red; }
+
+  /*
+  ----SECTION SPECIFIC STYLES------------
+  ---------------------------------------
+  */
+  #key-to-innovation {
+    padding-bottom: 400px; }
+
+  .maker-profile img {
+    /*width:52.8125%;
+    margin:0% 23.4375%;*/
+    width: 25.683890577508%;
+    margin: 40px 12.7952%; }
+
+  .maker-description {
+    width: 48.632218844985%;
+    margin-right: 0%;
+    background: rgba(100, 100, 100, 0.4); }
+
+  .maker-profile-name {
+    margin-right: 0%;
+    width: 48.632218844985%; }
+
+  .graphic:nth-child(even) {
+    margin-right: 0%; }
+
+  .graphic:nth-child(3) {
+    margin-right: 2.73556231003%; }
+
+  /*	.graphic:nth-child(3n+3){
+  		margin-right:2.73556231003%;
+  	}
+  */ }
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .two-column {
+    width: 100%; }
+
+  .one-column {
+    width: 48.632218844985%; }
+
+  h1 {
+    display: none; }
+
+  .three-column {
+    width: 100%; }
+
+  .four-column {
+    background: rgba(255, 50, 50, 0.3); }
+
+  .four-column {
+    width: 100%; }
+
+  .four-column-one {
+    width: 45%; }
+
+  .four-column-two {
+    width: 100%; }
+
+  .four-column .offset-one {
+    margin-left: 0%; }
+
+  .full-width {
+    max-width: 80%;
+    width: 80%; }
+
+  .offset-one {
+    margin-left: 0%; }
+
+  .offset-two {
+    margin-left: 0%; }
+
+  .title-illustration {
+    display: none; }
+
+  h2 {
+    font-size: 105px;
+    line-height: 87px;
+    letter-spacing: 0px; }
+
+  .content p {
+    font-size: 18px;
+    line-height: 25px; }
+
+  .main-nav ul li:nth-child(even) {
+    margin-right: 0px; }
+
+  .side-nav {
+    display: none; }
+
+  #key-to-innovation {
+    border: 10px solid white; }
+
+  #creativity-is-a-skill {
+    border: 10px solid #26b3f1; }
+
+  #innovators {
+    border: 10px solid #ff607f; }
+
+  .maker-profile img {
+    /*width:52.8125%;
+    margin:0% 23.4375%;*/
+    width: 100%;
+    margin: 40px 0%; }
+
+  /*
+  ----------------------------------------
+  NEWS STYLES
+  ----------------------------------------
+  */
+  .tweet h3, .link h3 {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased; }
+
+  img.full-width {
+    max-width: 100%;
+    width: 100%; }
+
+  .feature-img {
+    width: 100%; }
+
+  .feature .feature-title {
+    position: relative;
+    margin-bottom: 0.25em;
+    color: #68e540; } }
 /*this style should be deleted after we have images in there*/
 img {
   background-color: #f0f0f0;
   border: none; }
 
-/*this is the big honkin' type for each section*/
 h2.blog-feed {
   font-size: 100px;
   line-height: 100px;
   letter-spacing: 0px;
   color: #fffcdb; }
 
-/* NEWS Section rules - - - - - - - - - - - - - -  - - - - - - - - - -  */
-/*news colors*/
 .introduction {
   position: absolute;
   z-index: 2;
@@ -1051,227 +1197,8 @@ h2.blog-feed {
   padding-bottom: 200px; }
 
 .graphic {
-  float: left;
-  margin-right: 20px;
   margin-bottom: 80px; }
-
-.graphic img {
-  width: 350px;
-  height: 350px; }
 
 p.graphic-description {
   font-family: baskerville;
   font-style: italic; }
-
-.graphic:nth-child(3n+3) {
-  margin-right: 0px;
-  /*background:blue;*/ }
-
-/*@media only screen and (min-width:1200px) and (max-width:2500px){
-	.full-width{
-		width:1200px;
-	}
-
-}*/
-/*first breakpoint*/
- /*@media only screen and (min-width:730px) and (max-width:1070px){
- 	.full-width{
- 		width:680px;
- 	}
-
- 	.main-nav{
- 	
- 		width:680px;
- 	}
-
- 	.main-nav ul li:nth-child(4){
- 		margin-right:0px;
- 	}
-
-
- 	.logo{
-
- 	}
- 	
-
- 	.main-nav-container{
- 	}
-
- 	h2{
- 		font-size:150px;
- 		line-height:130px;
- 		width:680px;
-
- 	}
-
- 	
-
-
- 	.middle{
- 		margin-left:0px;
- 	}
-
-
- 	.image-break img{
- 		width:680px;
- 	}
-
-
- 	.full-frame{
- 		max-height:100%;
-
- 	}
-
- 	#making-process{
-
- 		background-position:-30% 550px,
- 							108% 900px;
- 	}
-
- 	.maker-profile img{
- 		max-width:330px;
- 		margin-left:24px;
- 	}
-
- 	.making-process-step img{
- 		width:370px;
- 	}
-
- 	.making-process-step{
- 		margin-left:0px;
-
- 	}
-
- 	.making-process-title{
- 		margin-left:185px;
- 		color:rgb(101,118,134);
- 	}
-
- 	p.figure{
- 		width:155px;
- 		margin-right:0px;
- 		color:rgb(101,118,134);
- 	}
-
- 	.graphic:nth-child(even){
- 		margin-right:0px;
- 	}
-
- 	.graphic:nth-child(3){
- 		margin-right:20px;
- 	}
-
- 	.graphic img{
- 		width:330px;
- 	}*/
- 	/*.five-column{
- 		width:680px;
- 	}
-
- 	.four-column{
- 		width:680px;
- 	}
-
- 	.three-column{
- 		width:330px;	
- 	}
-
- 	.two-column{
- 		width:330px;
- 	}
-
- 	.one-column{
- 		width:155px;
- 	}
-*/
-/*input:nth-child(odd){
-	margin-right:18px;
-}*/
- /*@media only screen and (min-width:320px) and (max-width:729px){
- 	.full-width{
- 		width:350px;
- 		background:yellow;
- 		margin-left:auto;
- 		margin-right:auto;
-
- 	}
-
- 	.wrapper{
- 		width:350px;
- 		background:red;
- 		margin-left:auto;
- 		margin-right:auto;
- 	}
-
- 	body{
- 		background:blue;
- 	}
-
- 	h1{
- 		display:none;
- 	}
-
- 	.main-nav{
- 		width:350px;
- 		background:orange;
- 		margin-left:0px;
-
- 	}
-
- 	.main-nav ul li:nth-child(even){
- 		margin-right:0px;
- 	}
-
- 	.middle{
- 		margin-left:0px;
- 	}
-
- 	.three-column{
- 		width:350px;
- 	}
-
- 	.two-column{
- 		width:350px;
- 	}
-
- 	.four-column{
- 		width:350px;
- 	}
-
- 	.five-column{
- 		width:350px;
- 	}
-
- 	h2{
- 		font-size:63px;
- 		letter-spacing:-1px;
- 		line-height:56px;
- 	}
- 	input{
- 		float:none;
- 		width:350px;
- 	}
-
- 	.figure{
- 		margin-left:0px;
- 		float:none;
- 	}
-
- 	.making-process-step{
- 		margin-left:0px;
- 		width:330px;
- 	}
-
- 	.making-process-step img{
- 		width:330px;
- 	}
-
- 	.image-break img{
- 		width:100%;
- 	}
-
- 	.side-nav{
- 		display:none;
- 	}
- }
-*/

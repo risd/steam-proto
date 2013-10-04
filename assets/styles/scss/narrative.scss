@@ -150,7 +150,7 @@
 		margin-left:43px;
 		margin-right:64px;
 		width:262px;
-		height:218px;
+		/*height:218px;*/
 		-webkit-filter:grayscale(1.0) brightness(85%) contrast(80%);
 	}
 
@@ -253,7 +253,23 @@
 	}
 
 
+	/*
+	--INFO GRAPHICS----------------------------------------
 
+	-------------------------------------------------------
+	*/
+
+	.graphic img{
+		width:100%;
+		height:350px;
+	}
+
+	.graphic:nth-child(3n+3){
+		margin-right:0px;
+		/*background:blue;*/
+
+	}
+	
 /*
 ---- ANIMATED TITLES --------------------------------------
 	all the different states for the title animations
