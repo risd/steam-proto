@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$green".
-        on line 88 of assets/styles/scss/narrative.scss
+        on line 95 of assets/styles/scss/narrative.scss
 
-83: 	
-84: 	/* Key to Innovation / big introduction *\/
-85: 
-86: 	#key-to-innovation{
-87: 		border:20px solid white;
-88: 		background:$green;
-89: 		padding-bottom:250px;
 90: 	}
-91: 
-92: 	#key-to-innovation .body-text{
-93: 		border-top:1px solid white;
+91: 	
+92: 	
+93: 
+94: 	#key-to-innovation .false-border{
+95: 		background:$green;
+96: 		position:relative;
+97: 		/*width:100%;*\/
+98: 		margin:2%;
+99: 	}
+100: 
 
 Backtrace:
-assets/styles/scss/narrative.scss:88
+assets/styles/scss/narrative.scss:95
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/variable.rb:49:in `_perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -60,4 +60,4 @@ assets/styles/scss/narrative.scss:88
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$green\".\A         on line 88 of assets/styles/scss/narrative.scss\A \A 83: 	\A 84: 	/* Key to Innovation / big introduction */\A 85: \A 86: 	#key-to-innovation{\A 87: 		border:20px solid white;\A 88: 		background:$green;\A 89: 		padding-bottom:250px;\A 90: 	}\A 91: \A 92: 	#key-to-innovation .body-text{\A 93: 		border-top:1px solid white;"; }
+  content: "Syntax error: Undefined variable: \"$green\".\A         on line 95 of assets/styles/scss/narrative.scss\A \A 90: 	}\A 91: 	\A 92: 	\A 93: \A 94: 	#key-to-innovation .false-border{\A 95: 		background:$green;\A 96: 		position:relative;\A 97: 		/*width:100%;*/\A 98: 		margin:2%;\A 99: 	}\A 100: "; }

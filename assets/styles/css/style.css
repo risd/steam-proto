@@ -311,7 +311,7 @@ h3, .content p.tweet {
   position: relative; }
 
 .content {
-  padding: 100px 0px 200px 0px; }
+  padding: 0px 0px 200px 0px; }
 
 /*
 -- HEADER IMAGE -------------------------------------------
@@ -335,9 +335,15 @@ h3, .content p.tweet {
 */
 /* Key to Innovation / big introduction */
 #key-to-innovation {
-  border: 20px solid white;
-  background: #68e540;
+  /*	border:20px solid white;*/
+  background: white;
   padding-bottom: 250px; }
+
+#key-to-innovation .false-border {
+  background: #68e540;
+  position: relative;
+  /*width:100%;*/
+  margin: 2%; }
 
 #key-to-innovation .body-text {
   border-top: 1px solid white;
@@ -906,6 +912,10 @@ nav.filters ul {
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   .title-illustration {
     display: none; }
+
+  .false-border .full-width {
+    width: 85%;
+    max-width: 85%; }
 
   .full-width {
     max-width: 80%;

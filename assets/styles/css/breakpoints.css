@@ -2,6 +2,10 @@
   .title-illustration {
     display: none; }
 
+  .false-border .full-width {
+    width: 85%;
+    max-width: 85%; }
+
   .full-width {
     max-width: 80%;
     width: 80%;
