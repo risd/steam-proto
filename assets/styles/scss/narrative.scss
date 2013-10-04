@@ -52,7 +52,7 @@
 	}
 
 	.content{
-		padding:0px 0px 200px 0px;
+		padding:100px 0px 200px 0px;
 	}
 
 
@@ -84,18 +84,9 @@
 	/* Key to Innovation / big introduction */
 
 	#key-to-innovation{
-	/*	border:20px solid white;*/
-		background:white;
-		padding-bottom:250px;
-	}
-	
-	
-
-	#key-to-innovation .false-border{
+		border:20px solid white;
 		background:$green;
-		position:relative;
-		/*width:100%;*/
-		margin:2%;
+		padding-bottom:250px;
 	}
 
 	#key-to-innovation .body-text{
