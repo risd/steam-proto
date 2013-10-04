@@ -76,6 +76,9 @@ body {
   color: #c8c8c8;
   border-bottom: 5px solid #c8c8c8; }
 
+.mobile-logo {
+  display: none; }
+
 /* 
 -- THE GRID COLUMNS  -----------------------------------------------
 	Initial values for the grid
@@ -1020,6 +1023,11 @@ nav.filters ul {
   img.full-width {
     max-width: 100%;
     width: 100%; } }
+/*
+----IPHONE SPECIFIC STYLES-------------------------------
+
+---------------------------------------------------------
+*/
 @media only screen and (min-width: 320px) and (max-width: 600px) {
   .two-column {
     width: 100%; }
@@ -1090,6 +1098,21 @@ nav.filters ul {
     margin:0% 23.4375%;*/
     width: 100%;
     margin: 40px 0%; }
+
+  .mobile-hidden {
+    top: -80px;
+    /*background:rgba(20,20,20,0.2);*/ }
+
+  .main-nav-container {
+    -webkit-transition: all 0.2s ease-in-out; }
+
+  .mobile-logo {
+    display: block;
+    text-align: center;
+    cursor: pointer; }
+
+  .clicked {
+    background: red; }
 
   /*
   ----------------------------------------

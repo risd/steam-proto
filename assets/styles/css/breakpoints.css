@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$blue".
-        on line 217 of assets/styles/scss/breakpoints.scss
+        on line 221 of assets/styles/scss/breakpoints.scss
 
-212: 	#key-to-innovation{
-213: 		border:10px solid white;
-214: 	}
-215: 
-216: 	#creativity-is-a-skill{
-217: 		border:10px solid $blue;
+216: 	#key-to-innovation{
+217: 		border:10px solid white;
 218: 	}
 219: 
-220: 	#innovators{
-221: 		border:10px solid $pink;
+220: 	#creativity-is-a-skill{
+221: 		border:10px solid $blue;
 222: 	}
+223: 
+224: 	#innovators{
+225: 		border:10px solid $pink;
+226: 	}
 
 Backtrace:
-assets/styles/scss/breakpoints.scss:217
+assets/styles/scss/breakpoints.scss:221
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/variable.rb:49:in `_perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/list.rb:70:in `block in _perform'
@@ -74,4 +74,4 @@ assets/styles/scss/breakpoints.scss:217
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 217 of assets/styles/scss/breakpoints.scss\A \A 212: 	#key-to-innovation{\A 213: 		border:10px solid white;\A 214: 	}\A 215: \A 216: 	#creativity-is-a-skill{\A 217: 		border:10px solid $blue;\A 218: 	}\A 219: \A 220: 	#innovators{\A 221: 		border:10px solid $pink;\A 222: 	}"; }
+  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 221 of assets/styles/scss/breakpoints.scss\A \A 216: 	#key-to-innovation{\A 217: 		border:10px solid white;\A 218: 	}\A 219: \A 220: 	#creativity-is-a-skill{\A 221: 		border:10px solid $blue;\A 222: 	}\A 223: \A 224: 	#innovators{\A 225: 		border:10px solid $pink;\A 226: 	}"; }

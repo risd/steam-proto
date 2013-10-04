@@ -75,6 +75,9 @@ body {
   color: #c8c8c8;
   border-bottom: 5px solid #c8c8c8; }
 
+.mobile-logo {
+  display: none; }
+
 /* 
 -- THE GRID COLUMNS  -----------------------------------------------
 	Initial values for the grid
