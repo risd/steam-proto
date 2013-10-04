@@ -549,7 +549,9 @@ img.burst {
   border-radius: 50%;
   width: 350px;
   height: 350px;
-  overflow: hidden; }
+  overflow: hidden;
+  float: none;
+  position: relative; }
 
 .news-ticker .date {
   font-family: courier; }
@@ -923,7 +925,7 @@ nav.filters ul {
   .full-width {
     max-width: 80%;
     width: 80%;
-    background: rgba(40, 40, 40, 0.4);
+    /*background:rgba(40,40,40,0.4);*/
     position: relative;
     /*background:green;*/ }
 
@@ -932,14 +934,14 @@ nav.filters ul {
     max-width: 84.125%; }
 
   .one-column {
-    background: yellow;
+    /*background:yellow;*/
     width: 22.948328267477%;
     margin-right: 2.73556231003%;
-    background: rgba(180, 180, 180, 0.7);
+    /*background:rgba(180,180,180,0.7);*/
     position: relative; }
 
   .two-column {
-    background: rgba(180, 180, 180, 0.3);
+    /*background:rgba(180,180,180,0.3);*/
     width: 48.632218844985%;
     margin-right: 2.73556231003%; }
 
@@ -951,7 +953,7 @@ nav.filters ul {
     margin-left: 0%; }
 
   .four-column {
-    background: rgba(220, 220, 220, 0.2);
+    /*background:rgba(220,220,220,0.2);*/
     width: 100%;
     margin-left: 0px;
     position: relative; }
@@ -981,7 +983,7 @@ nav.filters ul {
 
   .main-nav ul li:last-child {
     margin-right: 0px;
-    background: red; }
+    /*background:red;*/ }
 
   /*
   ----SECTION SPECIFIC STYLES------------
@@ -999,7 +1001,7 @@ nav.filters ul {
   .maker-description {
     width: 48.632218844985%;
     margin-right: 0%;
-    background: rgba(100, 100, 100, 0.4); }
+    /*background:rgba(100,100,100,0.4);*/ }
 
   .maker-profile-name {
     margin-right: 0%;
@@ -1014,7 +1016,10 @@ nav.filters ul {
   /*	.graphic:nth-child(3n+3){
   		margin-right:2.73556231003%;
   	}
-  */ }
+  */
+  img.full-width {
+    max-width: 100%;
+    width: 100%; } }
 @media only screen and (min-width: 320px) and (max-width: 600px) {
   .two-column {
     width: 100%; }
@@ -1029,7 +1034,7 @@ nav.filters ul {
     width: 100%; }
 
   .four-column {
-    background: rgba(255, 50, 50, 0.3); }
+    /*background:rgba(255,50,50,0.3);*/ }
 
   .four-column {
     width: 100%; }
@@ -1107,7 +1112,14 @@ nav.filters ul {
   .feature .feature-title {
     position: relative;
     margin-bottom: 0.25em;
-    color: #68e540; } }
+    color: #68e540; }
+
+  .content p.post-date, .content p.filter-type {
+    font-size: 14px; }
+
+  .news-ticker {
+    width: 300px;
+    height: 300px; } }
 /*this style should be deleted after we have images in there*/
 img {
   background-color: #f0f0f0;

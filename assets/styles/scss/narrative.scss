@@ -269,7 +269,7 @@
 		/*background:blue;*/
 
 	}
-	
+
 /*
 ---- ANIMATED TITLES --------------------------------------
 	all the different states for the title animations
@@ -354,6 +354,8 @@
 		width:350px;
 		height:350px;
 		overflow:hidden;
+		float:none;
+		position:relative;
 	}
 
 	.news-ticker .date{
