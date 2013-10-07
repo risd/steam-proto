@@ -1,0 +1,40 @@
+p.inquiries{
+	font-family:courier;
+	font-size:14px;
+	line-height: 24px;
+}
+
+ul.inquiries{
+	padding:0px;
+	list-style:none;
+	font-family:courier;
+	font-size:14px;
+	line-height: 24px;
+}
+
+ul.inquiries li{
+	color:black;
+}
+
+ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution{
+	margin-top:10px;
+}
+
+
+
+.press p, .resources p{
+	margin:8px 0px 8px 0px;
+	color:white;
+}
+
+.press a:link, .resources a:link{
+	display:block;
+	margin-bottom:40px;
+	-webkit-font-smoothing:antialiased;
+}
+
+
+.press a:hover{
+	color:$cream;
+}
+

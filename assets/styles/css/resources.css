@@ -1,26 +1,18 @@
 /*
-Syntax error: Undefined variable: "$blue".
-        on line 226 of assets/styles/scss/breakpoints.scss
+Syntax error: Undefined variable: "$slate".
+        on line 2 of assets/styles/scss/resources.scss
 
-221: 	#key-to-innovation{
-222: 		border:10px solid white;
-223: 	}
-224: 
-225: 	#creativity-is-a-skill{
-226: 		border:10px solid $blue;
-227: 	}
-228: 
-229: 	#innovators{
-230: 		border:10px solid $pink;
-231: 	}
+1: .resources{
+2: 	background:$slate;
+3: 	border:none;
+4: }
+5: 
+6: .resources a:hover{
+7: 	color:$cream;
 
 Backtrace:
-assets/styles/scss/breakpoints.scss:226
+assets/styles/scss/resources.scss:2
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/variable.rb:49:in `_perform'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/list.rb:70:in `block in _perform'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/list.rb:70:in `map'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/list.rb:70:in `_perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `visit'
@@ -33,16 +25,6 @@ assets/styles/scss/breakpoints.scss:226
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:362:in `visit_media'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:100:in `visit'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -74,4 +56,4 @@ assets/styles/scss/breakpoints.scss:226
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 226 of assets/styles/scss/breakpoints.scss\A \A 221: 	#key-to-innovation{\A 222: 		border:10px solid white;\A 223: 	}\A 224: \A 225: 	#creativity-is-a-skill{\A 226: 		border:10px solid $blue;\A 227: 	}\A 228: \A 229: 	#innovators{\A 230: 		border:10px solid $pink;\A 231: 	}"; }
+  content: "Syntax error: Undefined variable: \"$slate\".\A         on line 2 of assets/styles/scss/resources.scss\A \A 1: .resources{\A 2: 	background:$slate;\A 3: 	border:none;\A 4: }\A 5: \A 6: .resources a:hover{\A 7: 	color:$cream;"; }

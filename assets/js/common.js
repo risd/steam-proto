@@ -33,6 +33,7 @@
 
 			  	 $(".mobile-logo").click(function(){
 			    	$(".main-nav-container").toggleClass("mobile-hidden");
+			    	$(".blanket").toggleClass("blanketed")
 			    });
 
 			  });

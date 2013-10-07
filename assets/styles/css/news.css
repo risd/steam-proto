@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$cream".
-        on line 40 of assets/styles/scss/news.scss
+        on line 49 of assets/styles/scss/news.scss
 
-35: -- EVENT --------------------------------------
-36: 
-37: -----------------------------------------------
-38: *\/
-39: 	.event{
-40: 		background:$cream;
-41: 		padding-bottom:80px;
-42: 	}
-43: 
-44: 	.event h3{
-45: 		color:$slate;
+44: -- EVENT --------------------------------------
+45: 
+46: -----------------------------------------------
+47: *\/
+48: 	.event{
+49: 		background:$cream;
+50: 		padding-bottom:80px;
+51: 	}
+52: 
+53: 	.event h3{
+54: 		color:$slate;
 
 Backtrace:
-assets/styles/scss/news.scss:40
+assets/styles/scss/news.scss:49
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/variable.rb:49:in `_perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -60,4 +60,4 @@ assets/styles/scss/news.scss:40
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 40 of assets/styles/scss/news.scss\A \A 35: -- EVENT --------------------------------------\A 36: \A 37: -----------------------------------------------\A 38: */\A 39: 	.event{\A 40: 		background:$cream;\A 41: 		padding-bottom:80px;\A 42: 	}\A 43: \A 44: 	.event h3{\A 45: 		color:$slate;"; }
+  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 49 of assets/styles/scss/news.scss\A \A 44: -- EVENT --------------------------------------\A 45: \A 46: -----------------------------------------------\A 47: */\A 48: 	.event{\A 49: 		background:$cream;\A 50: 		padding-bottom:80px;\A 51: 	}\A 52: \A 53: 	.event h3{\A 54: 		color:$slate;"; }

@@ -266,10 +266,10 @@ h3, .content p.tweet {
   -webkit-font-smoothing: antialiased; }
 
 .content p {
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 29px;
   color: #3c3c3c;
-  font-family: 'Sentinel A', 'Sentinel B';
+  font-family: 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
   -webkit-text-rendering: optimizeLegibility;
@@ -648,7 +648,7 @@ form {
 
 input, label {
   font-size: 22px;
-  font-family: 'Sentinel A', 'Sentinel B';
+  font-family: 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
   background: none;
@@ -739,16 +739,21 @@ input[type="submit"]:hover {
 
 -----------------------------------------------
 */
-p.post-date, p.filter-type, ul.sharing li, .filters ul li {
+.post-date, p.filter-type, ul.sharing li, .filters ul li {
   font-family: courier;
   font-size: 14px;
   line-height: 14px; }
 
-p.post-date {
+.post-date {
   display: block;
   /*float:left;*/
   text-align: center;
-  margin-top: 100px; }
+  margin-top: 100px;
+  padding: 0px;
+  list-style: none; }
+
+.post-date .year {
+  margin-top: 8px; }
 
 .post {
   float: left; }
@@ -774,7 +779,7 @@ p.post-date {
 .event .filter-type {
   color: #ff8830; }
 
-.event .post-date {
+.event .post-date li {
   color: #657686; }
 
 .event ul li {
@@ -793,6 +798,9 @@ p.post-date {
 .link .post-date {
   margin-top: 20px; }
 
+.link .post-date li {
+  color: white; }
+
 .link .post-date:before {
   content: url("../../img/shapes/link-before.svg");
   width: 100%;
@@ -804,11 +812,12 @@ p.post-date {
   color: white; }
 
 .link h4 {
-  font-family: 'Sentinel A', 'Sentinel B';
-  font-weight: 300;
+  font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
   font-style: normal;
   font-size: 22px;
-  margin: 8px 0px 8px 0px; }
+  margin: 8px 0px 8px 0px;
+  -webkit-font-smoothing: antialiased; }
 
 .link a:link, .link a:visited {
   color: white;
@@ -816,6 +825,9 @@ p.post-date {
 
 .link ul li {
   color: #0094ce; }
+
+.link .sharing li:hover {
+  color: white; }
 
 /*
 -- TWEET --------------------------------------
@@ -840,8 +852,14 @@ p.post-date {
   height: 164px;
   padding-top: 120px; }
 
+.tweet .post-date li {
+  color: black; }
+
 .tweet h3 {
   color: #657686; }
+
+.tweet .sharing li:hover {
+  color: #ff607f; }
 
 /*
 -- FEATURE ------------------------------------
@@ -921,6 +939,43 @@ nav.filters ul {
 .filters ul li a:hover {
   border: 1px solid black; }
 
+p.inquiries {
+  font-family: courier;
+  font-size: 14px;
+  line-height: 24px; }
+
+ul.inquiries {
+  padding: 0px;
+  list-style: none;
+  font-family: courier;
+  font-size: 14px;
+  line-height: 24px; }
+
+ul.inquiries li {
+  color: black; }
+
+ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
+  margin-top: 10px; }
+
+.press p, .resources p {
+  margin: 8px 0px 8px 0px;
+  color: white; }
+
+.press a:link, .resources a:link {
+  display: block;
+  margin-bottom: 40px;
+  -webkit-font-smoothing: antialiased; }
+
+.press a:hover {
+  color: #fffbdb; }
+
+.resources {
+  background: #657686;
+  border: none; }
+
+.resources a:hover {
+  color: #fffbdb; }
+
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .title-illustration {
     display: none; }
@@ -967,9 +1022,13 @@ nav.filters ul {
     position: relative; }
 
   h2 {
-    color: yellow;
+    /*color:yellow;*/
     font-size: 200px;
     line-height: 160px; }
+
+  .feature-title {
+    font-size: 160px;
+    letter-spacing: 0px; }
 
   h1 {
     display: none; }
@@ -1075,7 +1134,7 @@ nav.filters ul {
     letter-spacing: 0px; }
 
   .content p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 25px; }
 
   .main-nav ul li:nth-child(even) {
@@ -1113,6 +1172,18 @@ nav.filters ul {
 
   .clicked {
     background: red; }
+
+  .blanket {
+    width: 100%;
+    height: 100%;
+    background: #657686;
+    opacity: 0.7;
+    position: fixed;
+    z-index: 3;
+    display: none; }
+
+  .blanketed {
+    display: block; }
 
   /*
   ----------------------------------------

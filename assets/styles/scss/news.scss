@@ -4,17 +4,25 @@
 -----------------------------------------------
 */
 
-	p.post-date, p.filter-type, ul.sharing li, .filters ul li{
+	.post-date, p.filter-type, ul.sharing li, .filters ul li{
 		font-family:courier;
 		font-size:14px;
 		line-height:14px;
 	}
 	
-	p.post-date{
+
+
+	.post-date{
 		display:block;
 		/*float:left;*/
 		text-align: center;
 		margin-top:100px;
+		padding:0px;
+		list-style:none;
+	}
+
+	.post-date .year{
+		margin-top:8px;
 	}
 
 	.post{
@@ -27,6 +35,7 @@
 		letter-spacing: -1px;
 		-webkit-font-smoothing: antialiased;
 	}
+
 
 
 
@@ -49,7 +58,7 @@
 		color:$orange;
 	}
 
-	.event .post-date{
+	.event .post-date li{
 		color:$slate;
 	}
 
@@ -73,6 +82,11 @@
 
 	.link .post-date{
 		margin-top:20px;
+
+	}
+
+	.link .post-date li{
+		color:white;
 	}
 
 	.link .post-date:before{
@@ -88,9 +102,10 @@
 	}
 
 	.link h4{
-		font-family: 'Sentinel A', 'Sentinel B'; font-weight: 300; font-style: normal;
+		font-family: 'Sentinel SSm A', 'Sentinel SSm B'; font-weight: 400; font-style: normal;
 		font-size:22px;
 		margin:8px 0px 8px 0px;
+		-webkit-font-smoothing:antialiased;
 	}
 
 	.link a:link, .link a:visited{
@@ -100,6 +115,10 @@
 
 	.link ul li{
 		color:$blue-dark;
+	}
+
+	.link .sharing li:hover{
+		color:white;
 	}
 
 /*
@@ -128,6 +147,11 @@
 		margin-top:0px;
 		height:164px;
 		padding-top:120px;
+
+	}
+
+	.tweet .post-date li{
+		color:black;
 	}
 
 	.tweet h3{
@@ -135,6 +159,9 @@
 	}
 
 
+	.tweet .sharing li:hover{
+		color:$pink;
+	}
 
 
 /*
@@ -175,6 +202,10 @@
 
 	.feature .post-date{
 		color:$slate;
+	}
+
+	.feature .sharing li:hover{
+
 	}
 
 /*
