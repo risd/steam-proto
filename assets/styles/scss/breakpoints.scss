@@ -312,4 +312,46 @@
 		height:300px;
 	}
 
+	.link .post-date{
+		margin-top:0px;
+	}
+
+	ul.post-date li{
+		float:left;
+
+	}
+
+	ul.post-date .year{
+		margin-top:0px;
+		margin-left:8px;
+	}
+
+	ul.sharing li:first-child{
+		float:none;
+		padding-bottom:8px;
+		margin-bottom:14px;
+		border-bottom:1px solid black;
+	}
+
+	ul.sharing li{
+		margin-right:10px;
+	}
+
+	.event ul.sharing li:first-child{
+		border-bottom:1px solid rgb(219, 216, 218);
+	}
+
+	.feature ul.sharing li:first-child{
+		border-bottom:1px solid rgb(219, 216, 218);
+	}
+
+	.tweet ul.sharing li:first-child{
+		border-bottom:1px solid rgb(219, 216, 218);
+	}
+
+	.link ul.sharing li:first-child{
+		border-bottom:1px solid $blue-dark;
+	}
+
+
 }

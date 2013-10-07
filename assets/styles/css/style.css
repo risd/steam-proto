@@ -1213,7 +1213,38 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
 
   .news-ticker {
     width: 300px;
-    height: 300px; } }
+    height: 300px; }
+
+  .link .post-date {
+    margin-top: 0px; }
+
+  ul.post-date li {
+    float: left; }
+
+  ul.post-date .year {
+    margin-top: 0px;
+    margin-left: 8px; }
+
+  ul.sharing li:first-child {
+    float: none;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid black; }
+
+  ul.sharing li {
+    margin-right: 10px; }
+
+  .event ul.sharing li:first-child {
+    border-bottom: 1px solid #dbd8da; }
+
+  .feature ul.sharing li:first-child {
+    border-bottom: 1px solid #dbd8da; }
+
+  .tweet ul.sharing li:first-child {
+    border-bottom: 1px solid #dbd8da; }
+
+  .link ul.sharing li:first-child {
+    border-bottom: 1px solid #0094ce; } }
 /*this style should be deleted after we have images in there*/
 img {
   background-color: #f0f0f0;
