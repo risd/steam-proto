@@ -338,16 +338,16 @@ h3, .content p.tweet {
 */
 /* Key to Innovation / big introduction */
 #key-to-innovation {
-  border: 20px solid white;
-  background: #68e540;
+  border: 20px solid #68e540;
+  background: white;
   padding-bottom: 250px; }
 
 #key-to-innovation .body-text {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white; }
+  border-top: 1px solid #68e540;
+  border-bottom: 1px solid #68e540; }
 
 #key-to-innovation h2 {
-  color: white; }
+  color: #68e540; }
 
 #key-to-innovation .body-text {
   z-index: 3; }
@@ -647,7 +647,7 @@ form {
   position: relative; }
 
 input, label {
-  font-size: 22px;
+  font-size: 16px;
   font-family: 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
@@ -1010,6 +1010,9 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
   .offset-one {
     margin-left: 0%; }
 
+  .offset-two {
+    margin-left: 25.683890577507%; }
+
   .four-column {
     /*background:rgba(220,220,220,0.2);*/
     width: 100%;
@@ -1144,7 +1147,7 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
     display: none; }
 
   #key-to-innovation {
-    border: 10px solid white; }
+    border: 10px solid #68e540; }
 
   #creativity-is-a-skill {
     border: 10px solid #26b3f1; }
@@ -1220,6 +1223,9 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
 
   ul.post-date li {
     float: left; }
+
+  label {
+    margin-bottom: 30px; }
 
   ul.post-date .year {
     margin-top: 0px;

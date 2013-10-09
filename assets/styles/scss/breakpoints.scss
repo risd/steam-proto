@@ -44,6 +44,10 @@
 		margin-left:0%;
 	}
 
+	.offset-two{
+		margin-left:25.683890577507%;
+	}
+
 	.four-column{
 		/*background:rgba(220,220,220,0.2);*/
 		width:100%;
@@ -219,7 +223,7 @@
 	}
 
 	#key-to-innovation{
-		border:10px solid white;
+		border:10px solid $green;
 	}
 
 	#creativity-is-a-skill{
@@ -319,6 +323,10 @@
 	ul.post-date li{
 		float:left;
 
+	}
+
+	label{
+		margin-bottom: 30px;
 	}
 
 	ul.post-date .year{

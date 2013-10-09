@@ -84,18 +84,18 @@
 	/* Key to Innovation / big introduction */
 
 	#key-to-innovation{
-		border:20px solid white;
-		background:$green;
+		border:20px solid $green;
+		background:white;
 		padding-bottom:250px;
 	}
 
 	#key-to-innovation .body-text{
-		border-top:1px solid white;
-		border-bottom:1px solid white;
+		border-top:1px solid $green;
+		border-bottom:1px solid $green;
 	}
 
 	#key-to-innovation h2{
-		color:white;
+		color:$green;
 	}
 
 
