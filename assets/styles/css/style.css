@@ -409,6 +409,10 @@ p.maker-description {
   background: #657686;
   border-top: 10px solid #ff607f; }
 
+#take-action h2 {
+  margin-top: 100px;
+  margin-bottom: 60px; }
+
 #take-action h2, #take-action h3 {
   color: #fffbdb; }
 
@@ -418,6 +422,21 @@ p.maker-description {
 #take-action.content p {
   color: #f0f0fa;
   -webkit-font-smoothing: antialiased; }
+
+#take-action .body-text {
+  border-top: 1px dotted #f0f0f0;
+  border-bottom: 1px dotted #f0f0f0; }
+
+#take-action a:link, #take-action a:visited {
+  color: #fffbdb;
+  text-decoration: none;
+  border-bottom: 1px dotted #fffbdb; }
+
+#take-action .inquiries a:link, #take-action .inquiries a:visited {
+  color: #fafafa; }
+
+#take-action .inquiries {
+  margin-top: 32px; }
 
 /* Making Process */
 #making-process {
@@ -641,10 +660,18 @@ a.nav-up, a.nav-down {
   z-index: 4;
   width: 100%; }
 
+/*
+-- CONTACT --------------------------------------------
+   contact info at the bottom
+-------------------------------------------------------------
+*/
 form {
-  margin-bottom: 200px;
+  margin-bottom: 80px;
   margin-top: 80px;
   position: relative; }
+
+form h3 {
+  margin-bottom: 12px; }
 
 input, label {
   font-size: 16px;
@@ -656,8 +683,8 @@ input, label {
   -webkit-font-smoothing: antialiased; }
 
 input:focus {
-  background: #8399AA;
-  color: #f0f0f0;
+  background: white;
+  color: #1e1e1e;
   outline: none;
   box-shadow: 0px 0px 5px rgba(30, 30, 30, 0.2); }
 
@@ -941,18 +968,19 @@ nav.filters ul {
 
 p.inquiries {
   font-family: courier;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px; }
 
 ul.inquiries {
   padding: 0px;
   list-style: none;
   font-family: courier;
-  font-size: 14px;
-  line-height: 24px; }
+  font-size: 16px;
+  line-height: 26px; }
 
 ul.inquiries li {
-  color: black; }
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased; }
 
 ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
   margin-top: 10px; }

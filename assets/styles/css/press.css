@@ -1,17 +1,17 @@
 /*
 Syntax error: Undefined variable: "$cream".
-        on line 38 of assets/styles/scss/press.scss
+        on line 39 of assets/styles/scss/press.scss
 
-33: 	-webkit-font-smoothing:antialiased;
-34: }
-35: 
+34: 	-webkit-font-smoothing:antialiased;
+35: }
 36: 
-37: .press a:hover{
-38: 	color:$cream;
-39: }
+37: 
+38: .press a:hover{
+39: 	color:$cream;
+40: }
 
 Backtrace:
-assets/styles/scss/press.scss:38
+assets/styles/scss/press.scss:39
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/variable.rb:49:in `_perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -56,4 +56,4 @@ assets/styles/scss/press.scss:38
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 38 of assets/styles/scss/press.scss\A \A 33: 	-webkit-font-smoothing:antialiased;\A 34: }\A 35: \A 36: \A 37: .press a:hover{\A 38: 	color:$cream;\A 39: }"; }
+  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 39 of assets/styles/scss/press.scss\A \A 34: 	-webkit-font-smoothing:antialiased;\A 35: }\A 36: \A 37: \A 38: .press a:hover{\A 39: 	color:$cream;\A 40: }"; }

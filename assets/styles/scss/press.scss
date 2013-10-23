@@ -1,6 +1,6 @@
 p.inquiries{
 	font-family:courier;
-	font-size:14px;
+	font-size:16px;
 	line-height: 24px;
 }
 
@@ -8,12 +8,13 @@ ul.inquiries{
 	padding:0px;
 	list-style:none;
 	font-family:courier;
-	font-size:14px;
-	line-height: 24px;
+	font-size:16px;
+	line-height: 26px;
 }
 
 ul.inquiries li{
-	color:black;
+	color:rgb(250,250,250);
+	-webkit-font-smoothing:antialiased;
 }
 
 ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution{
