@@ -27,15 +27,20 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution{
 	margin:8px 0px 8px 0px;
 	color:white;
 }
-
-.press a:link, .resources a:link{
+/*
+.press a:link{
 	display:block;
 	margin-bottom:40px;
 	-webkit-font-smoothing:antialiased;
 }
-
+*/
 
 .press a:hover{
 	color:$cream;
+}
+
+.press h3{
+	color:white;
+	margin-top:100px;
 }
 

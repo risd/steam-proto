@@ -4,11 +4,15 @@ Syntax error: Undefined variable: "$cream".
 
 34: 	-webkit-font-smoothing:antialiased;
 35: }
-36: 
+36: *\/
 37: 
 38: .press a:hover{
 39: 	color:$cream;
 40: }
+41: 
+42: .press h3{
+43: 	color:white;
+44: 	margin-top:100px;
 
 Backtrace:
 assets/styles/scss/press.scss:39
@@ -56,4 +60,4 @@ assets/styles/scss/press.scss:39
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 39 of assets/styles/scss/press.scss\A \A 34: 	-webkit-font-smoothing:antialiased;\A 35: }\A 36: \A 37: \A 38: .press a:hover{\A 39: 	color:$cream;\A 40: }"; }
+  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 39 of assets/styles/scss/press.scss\A \A 34: 	-webkit-font-smoothing:antialiased;\A 35: }\A 36: */\A 37: \A 38: .press a:hover{\A 39: 	color:$cream;\A 40: }\A 41: \A 42: .press h3{\A 43: 	color:white;\A 44: 	margin-top:100px;"; }

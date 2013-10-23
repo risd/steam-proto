@@ -1,7 +1,7 @@
 
 	form{
-		margin-bottom:80px;
-		margin-top:80px;
+		margin-bottom:20px;
+		/*margin-top:80px;*/
 		position:relative;
 	}
 
@@ -100,7 +100,8 @@
 	
 	input[type="submit"]{
 		background:none;
-		border:1px solid white;
+		border:1px solid rgb(200,200,200);
+		color:rgb(200,200,200);
 		-webkit-font-smoothing:antialiased;
 		margin-top:40px;
 		display:block;

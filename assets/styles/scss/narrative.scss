@@ -210,6 +210,12 @@
 		border-bottom: 1px dotted rgb(240,240,240);
 	}
 
+	#take-action .what-you-can-do{
+		border-top:none;
+		border-bottom:none;
+		margin-top:60px;
+	}
+
 	#take-action a:link, #take-action a:visited{
 		color:$cream;
 		text-decoration: none;

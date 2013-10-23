@@ -6,3 +6,35 @@
 .resources a:hover{
 	color:$cream;
 }
+
+.resources h3{
+	color:$cream;
+}
+
+.resources ul li, .press ul li{
+	font-size:18px;
+		line-height:29px;
+		color:rgb(60,60,60);
+		font-family: 'Sentinel SSm A', 'Sentinel SSm B'; font-weight: 400; font-style: normal;
+		-webkit-text-rendering: optimizeLegibility;
+		text-rendering: optimizeLegibility;
+		margin:0px;
+		-webkit-font-smoothing:antialiased;
+}
+
+.resources ul, .press ul{
+	list-style:none;
+	padding:0px;
+	margin-bottom:24px;
+}
+
+.resources ul li.source, .press ul li.source{
+	font-family:courier;
+	font-size:16px;
+	-webkit-font-smoothing:antialiased;
+
+}
+
+h3.first{
+	margin-top:100px;
+}

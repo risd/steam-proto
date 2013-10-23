@@ -1,6 +1,6 @@
 form {
-  margin-bottom: 80px;
-  margin-top: 80px;
+  margin-bottom: 20px;
+  /*margin-top:80px;*/
   position: relative; }
 
 form h3 {
@@ -79,7 +79,8 @@ input[type=radio]:checked + label:after {
 
 input[type="submit"] {
   background: none;
-  border: 1px solid white;
+  border: 1px solid #c8c8c8;
+  color: #c8c8c8;
   -webkit-font-smoothing: antialiased;
   margin-top: 40px;
   display: block; }

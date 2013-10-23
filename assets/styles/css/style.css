@@ -427,6 +427,11 @@ p.maker-description {
   border-top: 1px dotted #f0f0f0;
   border-bottom: 1px dotted #f0f0f0; }
 
+#take-action .what-you-can-do {
+  border-top: none;
+  border-bottom: none;
+  margin-top: 60px; }
+
 #take-action a:link, #take-action a:visited {
   color: #fffbdb;
   text-decoration: none;
@@ -666,8 +671,8 @@ a.nav-up, a.nav-down {
 -------------------------------------------------------------
 */
 form {
-  margin-bottom: 80px;
-  margin-top: 80px;
+  margin-bottom: 20px;
+  /*margin-top:80px;*/
   position: relative; }
 
 form h3 {
@@ -746,7 +751,8 @@ input[type=radio]:checked + label:after {
 
 input[type="submit"] {
   background: none;
-  border: 1px solid white;
+  border: 1px solid #c8c8c8;
+  color: #c8c8c8;
   -webkit-font-smoothing: antialiased;
   margin-top: 40px;
   display: block; }
@@ -989,13 +995,19 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
   margin: 8px 0px 8px 0px;
   color: white; }
 
-.press a:link, .resources a:link {
-  display: block;
-  margin-bottom: 40px;
-  -webkit-font-smoothing: antialiased; }
-
+/*
+.press a:link{
+	display:block;
+	margin-bottom:40px;
+	-webkit-font-smoothing:antialiased;
+}
+*/
 .press a:hover {
   color: #fffbdb; }
+
+.press h3 {
+  color: white;
+  margin-top: 100px; }
 
 .resources {
   background: #657686;
@@ -1003,6 +1015,34 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
 
 .resources a:hover {
   color: #fffbdb; }
+
+.resources h3 {
+  color: #fffbdb; }
+
+.resources ul li, .press ul li {
+  font-size: 18px;
+  line-height: 29px;
+  color: #3c3c3c;
+  font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased; }
+
+.resources ul, .press ul {
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 24px; }
+
+.resources ul li.source, .press ul li.source {
+  font-family: courier;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased; }
+
+h3.first {
+  margin-top: 100px; }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .title-illustration {
