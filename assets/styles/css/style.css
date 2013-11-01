@@ -564,7 +564,7 @@ img.burst {
 	mini ticker that lives beneath intro 
 -----------------------------------------------------------
 */
-#news-item {
+#news-ticker-wrapper {
   margin-top: -200px; }
 
 .news-ticker {
@@ -580,16 +580,15 @@ img.burst {
   float: none;
   position: relative; }
 
-.news-ticker .date {
+.news-post {
+  -webkit-transition: all 0.5s cubic-bezier(0.48, 0.01, 0.2, 1);
+  height: 370px; }
+
+.news-post h3 {
+  padding-top: 30%; }
+
+.news-post .date {
   font-family: courier; }
-
-.news-ticker article:first-child {
-  margin-bottom: 150px;
-  margin-top: 120px;
-  -webkit-transition: all 0.5s cubic-bezier(0.48, 0.01, 0.2, 1); }
-
-.news-ticker:hover article:first-child {
-  margin-top: -140px; }
 
 .news-ticker:hover {
   cursor: pointer; }
@@ -615,14 +614,21 @@ img.burst {
   border-radius: 50%;
   left: -146px; }
 
-a.nav-up, a.nav-down {
+a.nav-up,
+a.nav-down {
   font-family: "ModernPictograms";
   font-size: 38px;
   position: absolute;
   width: 100%;
   left: 0px;
   color: #68e540;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0.48, 0.01, 0.2, 1); }
+
+a.nav-up.hidden,
+a.nav-down.hidden {
+  opacity: 0; }
 
 .nav-up {
   top: 20px; }
