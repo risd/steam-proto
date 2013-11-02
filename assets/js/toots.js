@@ -76,8 +76,9 @@ var TweetFeed = function () {
 };
 
 var twitter_feed_el = d3.select('#twitter-feed');
-// setup news page
-if (twitter_feed_el) {
+
+// setup rotating tweets on home page
+if (twitter_feed_el[0][0]) {
 
     var tweet_feed = TweetFeed()
                     .el(twitter_feed_el)

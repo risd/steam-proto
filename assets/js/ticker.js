@@ -142,8 +142,9 @@ var Ticker = function () {
 };
 
 var news_ticker_el = d3.select('#news-ticker-wrapper > .news-ticker');
-// setup news page
-if (news_ticker_el) {
+
+// setup ticker on the home page page
+if (news_ticker_el[0][0]) {
     var slider = Slider()
                     .cssAttr('margin-top')
                     .distance(370)
