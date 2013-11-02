@@ -971,7 +971,8 @@ nav.filters ul {
   padding: 0px;
   margin-left: 925px;
   top: 200px;
-  /*right:0px;*/ }
+  /*right:0px;*/
+  z-index: 4; }
 
 .filters ul li a:link {
   /*margin-bottom:10px;*/

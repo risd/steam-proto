@@ -33,7 +33,7 @@ var NewsPage = function () {
                     type ='tweet';
                 }
                 if (d.tumbl) {
-                    type = 'tumbl';
+                    type = d.tumbl.tagged_type;
                 }
 
                 return 'content ' + type;
@@ -55,7 +55,7 @@ var NewsPage = function () {
     return page;
 };
 
-var filter_el = d3.select('nav.filters');
+var filter_el = d3.select('nav.filters ul');
 
 // setup news page
 if (filter_el[0][0]) {
@@ -73,6 +73,17 @@ if (filter_el[0][0]) {
             active: 1
         }
     ];
+    filter_el
+        .selectAll('.filter')
+        .data(filter_data)
+        .enter()
+        .append('li')
+        .attr('class', 'filter')
+        .append('a')
+        .attr('href', '#')
+        .text(function (d) {
+            return d.type;
+        });
 
     var news_el = d3.select('.wrapper');
 
