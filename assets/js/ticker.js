@@ -82,7 +82,7 @@ var Ticker = function () {
     var ticker = {},
         news = [],
         slider,
-        el = d3.select('#news_ticker');
+        el;
 
     ticker.el = function (x) {
         if (!arguments.length) return el;
@@ -98,7 +98,9 @@ var Ticker = function () {
 
     ticker.setup = function () {
         d3.json(STEAM.api.tumbl, function (tumbls) {
-            console.log(tumbls);
+            if (DEBUG) console.log('Tumbls loaded');
+            if (DEBUG) console.log(tumbls);
+
             news = tumbls.objects;
 
             add_to_dom();
@@ -138,13 +140,18 @@ var Ticker = function () {
 
     return ticker;
 };
-var slider = Slider()
-                .cssAttr('margin-top')
-                .distance(370)
-                .buttonPrevEl(d3.select('.news-ticker-controls .nav-up'))
-                .buttonNextEl(d3.select('.news-ticker-controls .nav-down'));
 
-var ticker = Ticker()
-                .el(d3.select('#news-ticker-wrapper > .news-ticker'))
-                .slider(slider)
-                .setup();
+var news_ticker_el = d3.select('#news-ticker-wrapper > .news-ticker');
+// setup news page
+if (news_ticker_el) {
+    var slider = Slider()
+                    .cssAttr('margin-top')
+                    .distance(370)
+                    .buttonPrevEl(d3.select('.news-ticker-controls .nav-up'))
+                    .buttonNextEl(d3.select('.news-ticker-controls .nav-down'));
+
+    var ticker = Ticker()
+                    .el(news_ticker_el)
+                    .slider(slider)
+                    .setup();
+}

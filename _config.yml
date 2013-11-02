@@ -1,3 +1,4 @@
 name: STEAM
 pygments: true
 siteurl: 'http://risd.github.io/steam-proto'
+exclude: ['*.ai']

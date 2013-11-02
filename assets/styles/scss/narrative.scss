@@ -480,9 +480,16 @@
 */
 
 	/*container for the news feed*/
-	.news-feed{
+	.twitter-feed {
 		position:relative;
 		z-index:2;
+	}
+
+	.single-tweet {
+		display: none;
+	}
+	.single-tweet.active {
+		display: block;
 	}
 
 	/*type styling for a tweet*/
