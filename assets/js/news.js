@@ -1,11 +1,102 @@
+var FilterNews = function () {
+    var filter = {},
+        data = [
+            {
+                type: 'event',
+                active: 0
+            }, {
+                type: 'tweet',
+                active: 0
+            }, {
+                type: 'feature',
+                active: 0
+            }
+        ],
+        page,  // ref to news page
+        el;
+
+    filter.el = function (x) {
+        if (!arguments.length) return el;
+        el = x;
+        return filter;
+    };
+
+    filter.data = function (x) {
+        if (!arguments.length) return data;
+        data = x;
+        return filter;
+    };
+
+    filter.page = function (x) {
+        if (!arguments.length) return page;
+        page = x;
+        return filter;
+    };
+
+    filter.setup = function () {
+        el.selectAll('.filter')
+            .data(data)
+            .enter()
+            .append('li')
+            .attr('class', function (d) {
+                return 'filter ' + d.type;
+            })
+            .append('a')
+            .attr('href', '#')
+            .text(function (d) {
+                return d.type + 's';
+            })
+            .on('click', function (d) {
+
+                if (d.active === 1) {
+                    // already active, do nothing
+                    return;
+                }
+
+                // set active state
+                for (var i = 0; i < data.length; i++) {
+                    if (d.type === data[i].type) {
+                        // this one was just clicked
+
+                        data[i].active = 1;
+                        filter_el.select('.filter.' + data[i].type)
+                            .classed('active', true);
+                    } else {
+                        // these filter are now disabled
+
+                        data[i].active = 0;
+                        filter_el.select('.filter.' + data[i].type)
+                            .classed('active', false);
+                    }
+                }
+                // set the active one, active
+                d.active = 1;
+
+                if (page) {
+                    page.update();
+                }
+            });
+        return filter;
+    };
+
+    return filter;
+};
 var NewsPage = function () {
     var page = {},
         news = [],
-        el;
+        filter,     // ref to filter state
+        el,
+        content_sel;
 
     page.el = function (x) {
         if (!arguments.length) return el;
         el = x;
+        return page;
+    };
+
+    page.filter = function (x) {
+        if (!arguments.length) return filter;
+        filter = x;
         return page;
     };
 
@@ -14,16 +105,82 @@ var NewsPage = function () {
             if (DEBUG) console.log('News loaded');
             if (DEBUG) console.log(api_news);
 
-            news = api_news.objects;
+            // sort news based on time.
+            news = api_news.objects.sort(function (a, b) {
+                var a_time, b_time;
+                if (a.tumbl) {
+                    a_time = a.tumbl.epoch_timestamp;
+                } else {
+                    a_time = a.tweet.epoch_timestamp;
+                }
+                if (b.tumbl) {
+                    b_time = b.tumbl.epoch_timestamp;
+                } else {
+                    b_time = b.tweet.epoch_timestamp;
+                }
+                return b_time - a_time;
+            });
 
-            add_to_dom();
+            // add elements to the dom
+            render_dom();
         });
 
         return page;
     };
 
-    function add_to_dom () {
-        el.selectAll('.content')
+    page.update = function () {
+        // update classes
+        var scroll_flag = true;
+
+        content_sel
+            .classed('active', function (d) {
+                console.log(d);
+                // filters been defined?
+                if (filter) {
+                    var active_filters = [];
+                    filter.data().forEach(function(el, index) {
+                        if (el.active)  {
+                            active_filters.push(el.type);
+                        }
+                    });
+
+                    // active filters
+                    if (active_filters.length > 0) {
+                        // if one is active, others are not
+                        if (active_filters.indexOf(d.type) > -1) {
+                            return true;
+                        } else {
+                            scroll_flag = false;
+                            return false;
+                        }
+                    } else {
+                        // no filters active. all items are active
+                        return true;
+                    }
+                }
+                return true;
+            });
+
+        d3.transition()
+            .delay(0)
+            .duration(500)
+            .tween('scroll', scrollTween(0));
+
+        return page;
+    };
+
+    function scrollTween(offset) {
+      return function() {
+        var i = d3.interpolateNumber(
+                    window.pageYOffset || document.documentElement.scrollTop,
+                    offset);
+        return function(t) { scrollTo(0, i(t)); };
+      };
+    }
+
+    function render_dom () {
+        // add new stuff
+        content_sel = el.selectAll('.content')
             .data(news)
             .enter()
             .append('section')
@@ -36,7 +193,10 @@ var NewsPage = function () {
                     type = d.tumbl.tagged_type;
                 }
 
-                return 'content ' + type;
+                // set type in d, used to update dom
+                d.type = type;
+
+                return 'content active ' + type;
             })
             .html(function (d) {
                 var type;
@@ -60,34 +220,17 @@ var filter_el = d3.select('nav.filters ul');
 // setup news page
 if (filter_el[0][0]) {
 
-    // TODO hook up filters
-    var filter_data = [
-        {
-            type: 'events',
-            active: 1
-        }, {
-            type: 'tweets',
-            active: 1
-        }, {
-            type: 'features',
-            active: 1
-        }
-    ];
-    filter_el
-        .selectAll('.filter')
-        .data(filter_data)
-        .enter()
-        .append('li')
-        .attr('class', 'filter')
-        .append('a')
-        .attr('href', '#')
-        .text(function (d) {
-            return d.type;
-        });
-
     var news_el = d3.select('.wrapper');
 
     var news_page = NewsPage()
                     .el(news_el)
                     .setup();
+
+    var filter = FilterNews()
+                    .el(filter_el);
+
+    // ugly solution. these should emit events.
+    news_page.filter(filter);
+    filter.page(news_page)
+          .setup();
 }

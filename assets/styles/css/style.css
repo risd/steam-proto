@@ -810,24 +810,35 @@ input[type="submit"]:hover {
   -webkit-font-smoothing: antialiased; }
 
 /*
+-- CONTENT ------------------------------------
+
+-----------------------------------------------
+*/
+.content {
+  display: none; }
+
+.content.active {
+  display: block; }
+
+/*
 -- EVENT --------------------------------------
 
 -----------------------------------------------
 */
-.event {
+.content.event {
   background: #fffbdb;
   padding-bottom: 80px; }
 
-.event h3 {
+.content.event h3 {
   color: #657686; }
 
-.event .filter-type {
+.content.event .filter-type {
   color: #ff8830; }
 
-.event .post-date li {
+.content.event .post-date li {
   color: #657686; }
 
-.event ul li {
+.content.event ul li {
   color: #ff8830; }
 
 /*
@@ -879,17 +890,17 @@ input[type="submit"]:hover {
 
 -----------------------------------------------
 */
-.tweet {
+.content.tweet {
   background: url("../../img/shapes/grid-pattern.png");
   padding: 20px 0px 60px 0px; }
 
-.tweet ul li {
+.content.tweet ul li {
   color: #bebebe; }
 
-.tweet .filter-type {
+.content.tweet .filter-type {
   color: #ff607f; }
 
-.tweet .post-date {
+.content.tweet .post-date {
   background: url("../../img/shapes/tweet-date.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -897,13 +908,13 @@ input[type="submit"]:hover {
   height: 164px;
   padding-top: 120px; }
 
-.tweet .post-date li {
+.content.tweet .post-date li {
   color: black; }
 
-.tweet h3 {
+.content.tweet h3 {
   color: #657686; }
 
-.tweet .sharing li:hover {
+.content.tweet .sharing li:hover {
   color: #ff607f; }
 
 /*
@@ -911,16 +922,16 @@ input[type="submit"]:hover {
 
 -----------------------------------------------
 */
-.feature {
+.content.feature {
   background: #f0fcf6; }
 
-.feature .filter-type, .feature ul li {
+.content.feature .filter-type, .feature ul li {
   color: #68e540; }
 
-.feature-title-container {
+.content.feature-title-container {
   position: relative; }
 
-.feature .feature-title {
+.content.feature .feature-title {
   color: white;
   height: 85%%;
   width: 100%;
@@ -931,12 +942,12 @@ input[type="submit"]:hover {
   text-align: center;
   z-index: 10; }
 
-.feature-img {
+.content.feature-img {
   position: relative;
   -webkit-filter: brightness(87%) grayscale(0.2);
   z-index: 1; }
 
-.feature .post-date {
+.content.feature .post-date {
   color: #657686; }
 
 /*
