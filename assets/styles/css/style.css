@@ -814,10 +814,10 @@ input[type="submit"]:hover {
 
 -----------------------------------------------
 */
-.content.filterable {
+.filterable {
   display: none; }
 
-.content.filterable.active {
+.filterable.active {
   display: block; }
 
 /*
