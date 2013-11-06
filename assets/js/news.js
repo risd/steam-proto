@@ -42,7 +42,7 @@ var FilterNews = function () {
                 return 'filter ' + d.type;
             })
             .append('a')
-            .attr('href', '#')
+            .attr('href', '')
             .text(function (d) {
                 return d.type + 's';
             })
