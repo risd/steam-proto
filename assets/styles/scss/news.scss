@@ -43,10 +43,10 @@
 -----------------------------------------------
 */
 
-.content {
+.content.filterable {
 	display: none;
 }
-.content.active {
+.content.filterable.active {
 	display: block;
 }
 

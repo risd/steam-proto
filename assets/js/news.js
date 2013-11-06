@@ -196,7 +196,7 @@ var NewsPage = function () {
                 // set type in d, used to update dom
                 d.type = type;
 
-                return 'content active ' + type;
+                return 'content filterable active ' + type;
             })
             .html(function (d) {
                 var type;
