@@ -11,21 +11,20 @@
     
   </div> <!-- /wrapper -->
 
-
-  
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="{{ site.siteurl }}/assets/js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="{{ site.siteurl }}/assets/js/jquery.lettering-0.6.1.min.js"></script>
+  <script src="{{ site.siteurl }}/assets/js/lgtm-standalone.js"></script>
   <script src="{{ site.siteurl }}/assets/js/common.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
   <script>
   var STEAM = window.STEAM = {
      url: function (path) {
          // path - absolute path to ressource
          // returns server + path
-         // return "http://limitless-atoll-9939.herokuapp.com" + path;
-         return "http://localhost:5000" + path;
+         return "http://limitless-atoll-9939.herokuapp.com" + path;
+         // return "http://localhost:5000" + path;
      }
   };
   STEAM.api = {
