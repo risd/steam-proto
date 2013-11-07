@@ -47,6 +47,7 @@ var FilterNews = function () {
                 return d.type + 's';
             })
             .on('click', function (d) {
+                d3.event.preventDefault();
 
                 if (d.active === 1) {
                     // already active, do nothing
