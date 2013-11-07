@@ -238,6 +238,9 @@ body {
 
 -------------------------------------------------------------------
 */
+h1 {
+  margin-bottom: 0; }
+
 h2 {
   font-size: 250px;
   margin: 0px;
@@ -274,6 +277,14 @@ h3, .content p.tweet {
   font-style: normal;
   -webkit-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility; }
+
+/*
+-- REUSABLE DISPLAY -----------------------------------------------
+
+-------------------------------------------------------------------
+*/
+.hidden {
+  display: none; }
 
 /*
 ---- SIDE NAVIGATION ------------------------------------
@@ -442,6 +453,11 @@ p.maker-description {
 
 #take-action .inquiries {
   margin-top: 32px; }
+
+#take-action .server-error {
+  color: red; }
+#take-action .thank-you {
+  color: blue; }
 
 /* Making Process */
 #making-process {
@@ -808,17 +824,6 @@ input[type="submit"]:hover {
   line-height: 53px;
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased; }
-
-/*
--- CONTENT ------------------------------------
-
------------------------------------------------
-*/
-.filterable {
-  display: none; }
-
-.filterable.active {
-  display: block; }
 
 /*
 -- EVENT --------------------------------------

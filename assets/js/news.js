@@ -130,11 +130,11 @@ var NewsPage = function () {
     };
 
     page.update = function () {
-        // update classes
-        var scroll_flag = true;
+        // add .hidden class to those that are not active
+        var scroll_flag = false;
 
         content_sel
-            .classed('active', function (d) {
+            .classed('hidden', function (d) {
                 console.log(d);
                 // filters been defined?
                 if (filter) {
@@ -148,24 +148,28 @@ var NewsPage = function () {
                     // active filters
                     if (active_filters.length > 0) {
                         // if one is active, others are not
+
+                        scroll_flag = true;
+
                         if (active_filters.indexOf(d.type) > -1) {
-                            return true;
-                        } else {
-                            scroll_flag = false;
                             return false;
+                        } else {
+                            return true;
                         }
                     } else {
                         // no filters active. all items are active
-                        return true;
+                        return false;
                     }
                 }
-                return true;
+                return false;
             });
 
-        d3.transition()
-            .delay(0)
-            .duration(500)
-            .tween('scroll', scrollTween(0));
+        if (scroll_flag) {
+            d3.transition()
+                .delay(0)
+                .duration(500)
+                .tween('scroll', scrollTween(0));
+        }
 
         return page;
     };
@@ -197,7 +201,7 @@ var NewsPage = function () {
                 // set type in d, used to update dom
                 d.type = type;
 
-                return 'content filterable active ' + type;
+                return 'content active ' + type;
             })
             .html(function (d) {
                 var type;

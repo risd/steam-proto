@@ -208,22 +208,25 @@ title: STEAM
 			<div class="grid full-width clearfix">
 				<h2 class="four-column offset-one">Join Us!</h2>
 				<img src="{{site.siteurl}}/assets/img/shapes/painted-rings-1.png" class="burst full-frame"/>
-				<div class="body-text four-column offset-one">
+				<div class="body-text four-column offset-one" id="form-wrapper">
 					<p>STEAM is a movement, championed by the Rhode Island School of Design, arguing that an art and design education will produce the creativity and innovation that will keep America competitive in this century.</p>
 
 					<p>STEM (Science, Technology, Engineering and Math) + Arts = STEAM.</p>
 				
 
-				<form class="clearfix" action="">
-					<p>Join the STEAM Mailing List to stay connected to the initiative.</p>
-					<input class="four-column-two" type="text" name="first_name" placeholder="Firstname" required>
-					<input class="four-column-two omega" type="text" name="last_name" placeholder="Lastname" required>
+					<form class="clearfix" action="javascript:void(0);">
+						<p>Join the STEAM Mailing List to stay connected to the initiative.</p>
+						<input class="four-column-two" type="text" name="first_name" placeholder="Firstname" required>
+						<input class="four-column-two omega" type="text" name="last_name" placeholder="Lastname" required>
 
-					<input class="four-column-two" type="email" name="email" placeholder="e-mail address" required>
-					<input class="four-column-two omega" type="url" name="website" placeholder="website">
-					
-					<input id="submit-btn" class="four-column-two offset-one" type="submit" value="Join"/>
-				</form>
+						<input class="four-column-two" type="email" name="email" placeholder="e-mail address" required>
+						<input class="four-column-two omega" type="url" name="website" placeholder="website">
+						
+						<input id="submit-btn" class="four-column-two offset-one" type="submit" value="Join"/>
+
+						<p class="server-error hidden">The computer that should be waiting for your request is taking a nap. Try again later.</p>
+					</form>
+					<p class="thank-you hidden">Thanks!</p>
 				</div>
 				<div class="four-column what-you-can-do offset-one">
 					<h3>What you can do in 2013</h3>

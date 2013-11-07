@@ -237,6 +237,9 @@ body {
 
 -------------------------------------------------------------------
 */
+h1 {
+  margin-bottom: 0; }
+
 h2 {
   font-size: 250px;
   margin: 0px;
@@ -273,3 +276,11 @@ h3, .content p.tweet {
   font-style: normal;
   -webkit-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility; }
+
+/*
+-- REUSABLE DISPLAY -----------------------------------------------
+
+-------------------------------------------------------------------
+*/
+.hidden {
+  display: none; }
