@@ -1,21 +1,21 @@
 /*
-Syntax error: Undefined variable: "$cream".
-        on line 39 of assets/styles/scss/press.scss
+Syntax error: Undefined variable: "$slate".
+        on line 12 of assets/styles/scss/press.scss
 
-34: 	-webkit-font-smoothing:antialiased;
-35: }
-36: *\/
-37: 
-38: .press a:hover{
-39: 	color:$cream;
-40: }
-41: 
-42: .press h3{
-43: 	color:white;
-44: 	margin-top:100px;
+7: 	font-size:16px;
+8: 	line-height: 24px;
+9: }
+10: 
+11: .press ul li a:link, .press ul li a:visited{
+12: 	color:$slate;
+13: 	text-decoration:none;
+14: }
+15: 
+16: .press ul li a:hover{
+17: 	text-decoration: underline;
 
 Backtrace:
-assets/styles/scss/press.scss:39
+assets/styles/scss/press.scss:12
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/variable.rb:49:in `_perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/script/node.rb:40:in `perform'
 /Users/mbarrett/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -60,4 +60,4 @@ assets/styles/scss/press.scss:39
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 39 of assets/styles/scss/press.scss\A \A 34: 	-webkit-font-smoothing:antialiased;\A 35: }\A 36: */\A 37: \A 38: .press a:hover{\A 39: 	color:$cream;\A 40: }\A 41: \A 42: .press h3{\A 43: 	color:white;\A 44: 	margin-top:100px;"; }
+  content: "Syntax error: Undefined variable: \"$slate\".\A         on line 12 of assets/styles/scss/press.scss\A \A 7: 	font-size:16px;\A 8: 	line-height: 24px;\A 9: }\A 10: \A 11: .press ul li a:link, .press ul li a:visited{\A 12: 	color:$slate;\A 13: 	text-decoration:none;\A 14: }\A 15: \A 16: .press ul li a:hover{\A 17: 	text-decoration: underline;"; }
