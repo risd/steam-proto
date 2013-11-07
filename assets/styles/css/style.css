@@ -30,6 +30,7 @@ body {
 
 ------------------------------------------------------------------
 */
+/*$slate:rgb(101, 118, 134);*/
 /*
 -- MAIN NAVIGATION -------------------------------------------------
 
@@ -415,9 +416,15 @@ p.maker-description {
 #happening h2 {
   color: #68e540; }
 
+img#join-bg {
+  opacity: 0.2; }
+
+#info-graphics {
+  background: #fffbdb; }
+
 /* Take Action */
 #take-action {
-  background: #657686;
+  background: #516272;
   border-top: 10px solid #ff607f; }
 
 #take-action h2 {
@@ -477,7 +484,7 @@ p.maker-description {
   font-size: 22px;
   margin-bottom: 22px;
   margin-top: 44px;
-  color: #657686; }
+  color: #516272; }
 
 .making-process-step {
   /*width:557px;
@@ -497,7 +504,7 @@ p.figure {
   text-align: center;
   font-family: baskerville;
   font-style: italic;
-  color: #657686; }
+  color: #516272; }
 
 	/*
 	--INFO GRAPHICS----------------------------------------
@@ -587,7 +594,7 @@ img.burst {
   margin: 0px auto;
   background: #fafafa;
   border: 20px solid #68e540;
-  color: #657686;
+  color: #516272;
   text-align: center;
   border-radius: 50%;
   width: 350px;
@@ -671,7 +678,7 @@ a.nav-down.hidden {
 
 /*type styling for a tweet*/
 .content p.tweet {
-  color: #657686; }
+  color: #516272; }
 
 .tweet a:link, .tweet a:visited {
   color: #ff607f; }
@@ -835,13 +842,13 @@ input[type="submit"]:hover {
   padding-bottom: 80px; }
 
 .content.event h3 {
-  color: #657686; }
+  color: #516272; }
 
 .content.event .filter-type {
   color: #ff8830; }
 
 .content.event .post-date li {
-  color: #657686; }
+  color: #516272; }
 
 .content.event ul li {
   color: #ff8830; }
@@ -917,7 +924,7 @@ input[type="submit"]:hover {
   color: black; }
 
 .content.tweet h3 {
-  color: #657686; }
+  color: #516272; }
 
 .content.tweet .sharing li:hover {
   color: #ff607f; }
@@ -953,7 +960,7 @@ input[type="submit"]:hover {
   z-index: 1; }
 
 .content.feature .post-date {
-  color: #657686; }
+  color: #516272; }
 
 /*
 -- SOCIAL -------------------------------------
@@ -1001,10 +1008,20 @@ nav.filters ul {
 .filters ul li a:hover {
   border: 1px solid black; }
 
+.press {
+  background: url("../../img/shapes/grid-pattern.png"); }
+
 p.inquiries {
   font-family: courier;
   font-size: 16px;
   line-height: 24px; }
+
+.press ul li a:link, .press ul li a:visited {
+  color: #516272;
+  text-decoration: none; }
+
+.press ul li a:hover {
+  text-decoration: underline; }
 
 ul.inquiries {
   padding: 0px;
@@ -1035,11 +1052,14 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
   color: #fffbdb; }
 
 .press h3 {
-  color: white;
-  margin-top: 100px; }
+  color: #516272;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 48px;
+  line-height: 54px; }
 
 .resources {
-  background: #657686;
+  background: #516272;
   border: none; }
 
 .resources a:hover {
@@ -1063,7 +1083,7 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution {
 .resources ul, .press ul {
   list-style: none;
   padding: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 32px; }
 
 .resources ul li.source, .press ul li.source {
   font-family: courier;
@@ -1276,7 +1296,7 @@ h3.first {
   .blanket {
     width: 100%;
     height: 100%;
-    background: #657686;
+    background: #516272;
     opacity: 0.7;
     position: fixed;
     z-index: 3;

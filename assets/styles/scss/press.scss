@@ -1,7 +1,20 @@
+.press{
+	background:url('../../img/shapes/grid-pattern.png');
+}
+
 p.inquiries{
 	font-family:courier;
 	font-size:16px;
 	line-height: 24px;
+}
+
+.press ul li a:link, .press ul li a:visited{
+	color:$slate;
+	text-decoration:none;
+}
+
+.press ul li a:hover{
+	text-decoration: underline;
 }
 
 ul.inquiries{
@@ -40,7 +53,10 @@ ul.inquiries li.name, ul.inquiries li.e-mail, ul.inquiries li.institution{
 }
 
 .press h3{
-	color:white;
-	margin-top:100px;
+	color:$slate;
+	margin-top:80px;
+	margin-bottom:40px;
+	font-size:48px;
+	line-height:54px;
 }
 
