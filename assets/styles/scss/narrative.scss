@@ -409,6 +409,9 @@
 		// within .news-ticker
 		-webkit-transition: all .5s cubic-bezier(.48,.01,.2,1);
 		height: 370px;
+
+		z-index: 4;
+		position: relative;
 	}
 
 	.news-post h3 {
@@ -438,7 +441,6 @@
 		position:absolute;
 		top:0px;
 		left:44%;
-		z-index:4;
 		height:100%;
 		width:40px;
 		text-align:center;
@@ -466,6 +468,7 @@
 		color:$green;
 		text-decoration:none;
 		opacity: 1;
+		z-index:5;
 
 		-webkit-transition: all .5s cubic-bezier(.48,.01,.2,1);
 	}

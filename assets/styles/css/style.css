@@ -605,7 +605,9 @@ img.burst {
 
 .news-post {
   -webkit-transition: all 0.5s cubic-bezier(0.48, 0.01, 0.2, 1);
-  height: 370px; }
+  height: 370px;
+  z-index: 4;
+  position: relative; }
 
 .news-post h3 {
   padding-top: 30%; }
@@ -621,7 +623,6 @@ img.burst {
   position: absolute;
   top: 0px;
   left: 44%;
-  z-index: 4;
   height: 100%;
   width: 40px;
   text-align: center; }
@@ -647,6 +648,7 @@ a.nav-down {
   color: #68e540;
   text-decoration: none;
   opacity: 1;
+  z-index: 5;
   -webkit-transition: all 0.5s cubic-bezier(0.48, 0.01, 0.2, 1); }
 
 a.nav-up.hidden,

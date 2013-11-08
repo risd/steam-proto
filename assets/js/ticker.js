@@ -121,6 +121,12 @@ var Ticker = function () {
             .enter()
             .insert('article', '.news-ticker-controls')
             .attr('class', 'news-post')
+            .on('click', function (d) {
+                console.log('article clicked!');
+                // go to the story
+                var path = '/news/#' + d.steam_url;
+                window.location.href = window.STEAM.url(path);
+            })
             .call(add_title)
             .call(add_date);
     }
