@@ -23,7 +23,7 @@
      url: function (path) {
          // path - absolute path to ressource
          // returns server + path
-         var dev = '{{ site.port }}';
+         var dev = '{{ site.dev }}';
          if (dev) {
           return "http://localhost:5000" + path;
          }

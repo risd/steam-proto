@@ -2,3 +2,4 @@ name: STEAM
 pygments: true
 port: 4001
 exclude: ['*.ai']
+dev: true
