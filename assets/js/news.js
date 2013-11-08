@@ -108,15 +108,16 @@ var NewsPage = function () {
 
             // sort news based on time.
             news = api_news.objects.sort(function (a, b) {
-                var a_time, b_time;
+                var a_time = 0,
+                    b_time = 0;
                 if (a.tumbl) {
                     a_time = a.tumbl.epoch_timestamp;
-                } else {
+                } else if (a.tweet) {
                     a_time = a.tweet.epoch_timestamp;
                 }
                 if (b.tumbl) {
                     b_time = b.tumbl.epoch_timestamp;
-                } else {
+                } else if (b.tweet) {
                     b_time = b.tweet.epoch_timestamp;
                 }
                 return b_time - a_time;

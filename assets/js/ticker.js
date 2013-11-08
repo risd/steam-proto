@@ -101,7 +101,9 @@ var Ticker = function () {
             if (DEBUG) console.log('Tumbls loaded');
             if (DEBUG) console.log(tumbls);
 
-            news = tumbls.objects;
+            news = tumbls.objects.sort(function (a, b) {
+                return b.tumbl.epoch_timestamp - a.tumbl.epoch_timestamp;
+            });
 
             add_to_dom();
 
