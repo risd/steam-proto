@@ -125,7 +125,7 @@ var Ticker = function () {
                 console.log('article clicked!');
                 // go to the story
                 var path = '/news/#' + d.steam_url;
-                window.location.href = window.STEAM.url(path);
+                window.location.href = 'http://' + window.location.host + path;
             })
             .call(add_title)
             .call(add_date);

@@ -1,4 +1,10 @@
 var FilterNews = function () {
+    // Adds filters to the page
+    // And allows you to use them
+    // to determine what content
+    // you want to seet.
+    // Disable on permalinked pages.
+
     var filter = {},
         data = [
             {
@@ -12,7 +18,8 @@ var FilterNews = function () {
                 active: 0
             }
         ],
-        page,  // ref to news page
+        page,        // ref to news page
+        hidden = 0,  // binary, are the filters showing or not?
         el;
 
     filter.el = function (x) {
@@ -24,6 +31,17 @@ var FilterNews = function () {
     filter.data = function (x) {
         if (!arguments.length) return data;
         data = x;
+        return filter;
+    };
+
+    filter.hidden = function (x) {
+        if (!arguments.length) return hidden;
+
+        hidden = x;
+
+        // set the state
+        el.classed('hidden', hidden);
+
         return filter;
     };
 
@@ -39,7 +57,11 @@ var FilterNews = function () {
             .enter()
             .append('li')
             .attr('class', function (d) {
-                return 'filter ' + d.type;
+                var extra = '';
+                if (hidden) {
+                    extra = ' hidden';
+                }
+                return 'filter ' + d.type + extra;
             })
             .append('a')
             .attr('href', '')
@@ -98,6 +120,12 @@ var NewsPage = function () {
     page.filter = function (x) {
         if (!arguments.length) return filter;
         filter = x;
+        return page;
+    };
+
+    page.hash = function (x) {
+        if (!arguments.length) return hash;
+        hash = x;
         return page;
     };
 
@@ -229,14 +257,21 @@ if (filter_el[0][0]) {
     var news_el = d3.select('.wrapper');
 
     var news_page = NewsPage()
-                    .el(news_el)
-                    .setup();
+                    .el(news_el);
 
     var filter = FilterNews()
                     .el(filter_el);
 
-    // ugly solution. these should emit events.
-    news_page.filter(filter);
+    if (window.location.hash) {
+        // load just the article
+        news_page.hash(window.location.hash);
+        filter.hidden(true);
+
+        // otherwise, the entire page will start loaded
+    }
+
+    news_page.filter(filter)
+             .setup();
     filter.page(news_page)
           .setup();
 }
