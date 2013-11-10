@@ -122,8 +122,8 @@ var Ticker = function () {
             .on('click', function (d) {
                 console.log('article clicked!');
                 // go to the story
-                var path = '/news/#' + d.id + '-' + d.tumbl.steam_url;
-                window.location.href = 'http://' + window.location.host + path;
+                var path = 'news/#' + d.id + '-' + d.tumbl.steam_url;
+                window.location.href = window.location.href + path;
             })
             .call(add_title)
             .call(add_date);
