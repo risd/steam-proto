@@ -109,6 +109,7 @@ var NewsPage = function () {
         news = [],
         filter,     // ref to filter state
         el,
+        hash,       // cur hash of page
         content_sel;
 
     page.el = function (x) {
@@ -130,30 +131,28 @@ var NewsPage = function () {
     };
 
     page.setup = function () {
-        d3.json(STEAM.api.news, function (api_news) {
-            if (DEBUG) console.log('News loaded');
-            if (DEBUG) console.log(api_news);
-
-            // sort news based on time.
-            news = api_news.objects.sort(function (a, b) {
-                var a_time = 0,
-                    b_time = 0;
-                if (a.tumbl) {
-                    a_time = a.tumbl.epoch_timestamp;
-                } else if (a.tweet) {
-                    a_time = a.tweet.epoch_timestamp;
-                }
-                if (b.tumbl) {
-                    b_time = b.tumbl.epoch_timestamp;
-                } else if (b.tweet) {
-                    b_time = b.tweet.epoch_timestamp;
-                }
-                return b_time - a_time;
+        if (hash) {
+            // load just the single article
+            d3.json(STEAM.api.news(hash), function (api_news) {
+                news = [];
+                news.push(api_news);
+                render_dom();
             });
+        } else {
+            d3.json(STEAM.api.news(), function (api_news) {
+                if (DEBUG) console.log('News loaded');
+                if (DEBUG) console.log(api_news);
 
-            // add elements to the dom
-            render_dom();
-        });
+                // sort news based on time.
+                console.log(api_news);
+                news = api_news.objects.sort(function (a, b) {
+                    return b.epoch_timestamp - a.epoch_timestamp;
+                });
+
+                // add elements to the dom
+                render_dom();
+            });
+        }
 
         return page;
     };
@@ -264,7 +263,7 @@ if (filter_el[0][0]) {
 
     if (window.location.hash) {
         // load just the article
-        news_page.hash(window.location.hash);
+        news_page.hash(window.location.hash.split("#")[1]);
         filter.hidden(true);
 
         // otherwise, the entire page will start loaded

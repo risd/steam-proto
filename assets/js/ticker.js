@@ -101,9 +101,7 @@ var Ticker = function () {
             if (DEBUG) console.log('Tumbls loaded');
             if (DEBUG) console.log(tumbls);
 
-            news = tumbls.objects.sort(function (a, b) {
-                return b.epoch_timestamp - a.epoch_timestamp;
-            });
+            news = tumbls.objects;
 
             add_to_dom();
 
@@ -124,7 +122,7 @@ var Ticker = function () {
             .on('click', function (d) {
                 console.log('article clicked!');
                 // go to the story
-                var path = '/news/#' + d.steam_url;
+                var path = '/news/#' + d.id + '-' + d.tumbl.steam_url;
                 window.location.href = 'http://' + window.location.host + path;
             })
             .call(add_title)
@@ -134,7 +132,7 @@ var Ticker = function () {
     function add_title (sel) {
         sel.append('h3')
             .text(function (d) {
-                return d.title;
+                return d.tumbl.title;
             });
     }
 
@@ -142,7 +140,7 @@ var Ticker = function () {
         sel.append('p')
             .attr('class', 'date')
             .text(function (d) {
-                return d.ticker_timestamp;
+                return d.tumbl.ticker_timestamp;
             });
     }
 
