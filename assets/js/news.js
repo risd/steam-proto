@@ -242,7 +242,58 @@ var NewsPage = function () {
                     return d[type].steam_html;
                 }
 
-            });
+            })
+            .call(add_links);
+    }
+
+
+    function add_links (sel) {
+        console.log(sel);
+
+        sel.each(function (d, i) {
+            var that = d3.select(this);
+            
+            that
+                .selectAll('.icon.twitter')
+                .append('a')
+                .attr('href', function () {
+                    var path = steam_url(d);
+                    
+                    return 'http://twitter.com/intent/tweet?url=' +
+                            encodeURIComponent(path);
+                })
+                .attr('target', '_blank');
+
+            that
+                .selectAll('.icon.facebook')
+                .append('a')
+                .attr('href', function () {
+                    var path = steam_url(d);
+
+                    return 'https://www.facebook.com/sharer/sharer.php?u=' +
+                            encodeURIComponent(path);
+                })
+                .attr('target', '_blank');
+
+            that
+                .selectAll('.icon.permalink')
+                .append('a')
+                .attr('href', function () {
+                    return steam_url(d);
+                });
+        });
+    }
+
+    function steam_url (d) {
+        var path;
+        if( d.tumbl) {
+            path = 'http://' + window.location.host +
+                    '/news/#' + d.id + d.tumbl.steam_url;
+        } else {
+            path = 'http://' + window.location.host +
+                    '/news/#' + d.id;
+        }
+        return path;
     }
 
     return page;

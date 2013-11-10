@@ -226,6 +226,21 @@
 		font-family: "ModernPictograms";
 		font-size:24px;
 		margin-left:3px;
+		cursor: pointer;
+	}
+
+	li.icon.twitter a:before {
+		content: 't';
+	}
+	li.icon.facebook a:before {
+		content: 'F';
+	}
+	li.icon.permalink a:before {
+		content: 'Å';
+	}
+
+	li.icon a {
+		text-decoration: none;
 	}
 
 
