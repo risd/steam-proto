@@ -12,7 +12,7 @@ var TweetFeed = function () {
     };
 
     feed.setup = function () {
-        d3.json(STEAM.api.tweet, function (toots) {
+        d3.json(STEAM.api.hash_tweet, function (toots) {
             if (DEBUG) console.log('Tweets loaded');
             if (DEBUG) console.log(toots);
 
@@ -46,7 +46,7 @@ var TweetFeed = function () {
         sel.append('p')
             .attr('class', 'tweet')
             .html(function (d) {
-                return d.text;
+                return d.html;
             });
     }
 
