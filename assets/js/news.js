@@ -163,7 +163,6 @@ var NewsPage = function () {
 
         content_sel
             .classed('hidden', function (d) {
-                console.log(d);
                 // filters been defined?
                 if (filter) {
                     var active_filters = [];
@@ -248,7 +247,6 @@ var NewsPage = function () {
 
 
     function add_links (sel) {
-        console.log(sel);
 
         sel.each(function (d, i) {
             var that = d3.select(this);
@@ -280,6 +278,33 @@ var NewsPage = function () {
                 .append('a')
                 .attr('href', function () {
                     return steam_url(d);
+                })
+                .on('click', function () {
+                    d3.event.preventDefault();
+
+                    var parent_el = d3.select(d3.select(this)[0][0].parentNode);
+                    var input_el = parent_el.select('input');
+
+                    console.log(parent_el);
+
+                    if (input_el.classed('hidden')) {
+                        input_el.classed('hidden', false);
+                        input_el[0][0].select();
+                    } else {
+                        input_el.classed('hidden', true);
+                    }
+                });
+
+            that
+                .selectAll('.icon.permalink')
+                .append('input')
+                .attr('type', 'text')
+                .attr('class', 'hidden')
+                .on('click', function () {
+                    d3.event.preventDefault();
+                })
+                .attr('value', function () {
+                    return steam_url(d);
                 });
         });
     }
@@ -287,11 +312,11 @@ var NewsPage = function () {
     function steam_url (d) {
         var path;
         if( d.tumbl) {
-            path = 'http://' + window.location.host +
-                    '/news/#' + d.id + d.tumbl.steam_url;
+            path = window.location.href +
+                    '#' + d.id + '-' + d.tumbl.steam_url;
         } else {
-            path = 'http://' + window.location.host +
-                    '/news/#' + d.id;
+            path = window.location.href +
+                    '#' + d.id;
         }
         return path;
     }

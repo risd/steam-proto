@@ -219,7 +219,6 @@
 
 	ul.sharing li{
 		float:left;
-
 	}
 
 	ul.sharing li.icon{
@@ -237,6 +236,17 @@
 	}
 	li.icon.permalink a:before {
 		content: 'Å';
+	}
+
+	li.icon.permalink a {
+		margin-right: 10px;
+	}
+
+	li.icon input {
+		color:$slate;
+		margin: 0;
+		padding: 0;
+		height: 20px;
 	}
 
 	li.icon a {
