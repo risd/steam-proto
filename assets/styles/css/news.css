@@ -1,21 +1,21 @@
 /*
-Syntax error: Undefined variable: "$cream".
-        on line 46 of assets/styles/scss/news.scss
+Syntax error: Undefined variable: "$blue".
+        on line 59 of assets/styles/scss/news.scss
 
-41: -- EVENT --------------------------------------
-42: 
-43: -----------------------------------------------
-44: *\/
-45: 	.content.event{
-46: 		background:$cream;
-47: 		padding-bottom:80px;
-48: 	}
-49: 
-50: 	.content.event h3{
-51: 		color:$slate;
+54: 
+55: -----------------------------------------------
+56: *\/
+57: 
+58: 	.link{
+59: 		background:$blue;
+60: 		padding:20px 0px 60px 0px;
+61: 		border-bottom:1px solid $blue-dark;
+62: 	}
+63: 
+64: 	.link .post-date{
 
 Backtrace:
-assets/styles/scss/news.scss:46
+assets/styles/scss/news.scss:59
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/variable.rb:48:in `_perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/tree/visitors/perform.rb:301:in `visit_prop'
@@ -61,4 +61,4 @@ assets/styles/scss/news.scss:46
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$cream\".\A         on line 46 of assets/styles/scss/news.scss\A \A 41: -- EVENT --------------------------------------\A 42: \A 43: -----------------------------------------------\A 44: */\A 45: 	.content.event{\A 46: 		background:$cream;\A 47: 		padding-bottom:80px;\A 48: 	}\A 49: \A 50: 	.content.event h3{\A 51: 		color:$slate;"; }
+  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 59 of assets/styles/scss/news.scss\A \A 54: \A 55: -----------------------------------------------\A 56: */\A 57: \A 58: 	.link{\A 59: 		background:$blue;\A 60: 		padding:20px 0px 60px 0px;\A 61: 		border-bottom:1px solid $blue-dark;\A 62: 	}\A 63: \A 64: 	.link .post-date{"; }

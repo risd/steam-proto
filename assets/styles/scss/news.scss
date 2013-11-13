@@ -36,31 +36,15 @@
 		-webkit-font-smoothing: antialiased;
 	}
 
+	.loading h3 {
+		font-size:48px;
+		line-height:53px;
+		letter-spacing: -1px;
+		-webkit-font-smoothing: antialiased;
 
-/*
--- EVENT --------------------------------------
+		text-align: center;
 
------------------------------------------------
-*/
-	.content.event{
-		background:$cream;
-		padding-bottom:80px;
-	}
-
-	.content.event h3{
-		color:$slate;
-	}
-
-	.content.event .filter-type{
-		color:$orange;
-	}
-
-	.content.event .post-date li{
-		color:$slate;
-	}
-
-	.content.event ul li{
-		color:$orange;
+		padding: 20px 0;
 	}
 
 
@@ -118,6 +102,40 @@
 		color:white;
 	}
 
+
+/*
+-- EVENT --------------------------------------
+
+-----------------------------------------------
+*/
+	.content.event{
+		background:$cream;
+		padding-bottom:80px;
+	}
+
+	.content.event h3{
+		color:$slate;
+	}
+
+	.content.event .filter-type{
+		color:$orange;
+	}
+
+	.content.event .post-date li{
+		color:$slate;
+	}
+
+	.content.event ul li{
+		color:$orange;
+	}
+
+	.event + .loading {
+		background:$cream;
+	}
+	.event + .loading > h3 {
+		color:$slate;
+	}
+
 /*
 -- TWEET --------------------------------------
 
@@ -158,6 +176,13 @@
 
 	.content.tweet .sharing li:hover{
 		color:$pink;
+	}
+
+	.tweet + .loading {
+		background:url("../../img/shapes/grid-pattern.png");
+	}
+	.tweet + .loading > h3 {
+		color:$slate;
 	}
 
 
@@ -203,6 +228,13 @@
 
 	.content.feature .sharing li:hover{
 
+	}
+
+	.feature + .loading {
+		background:$green-tint;
+	}
+	.feature + .loading > h3 {
+		color:$green;
 	}
 
 /*

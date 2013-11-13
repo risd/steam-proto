@@ -318,7 +318,7 @@ var NewsPage = function () {
                 .enter()
                 .append('div')
                 .attr('class', 'loading')
-                .html('<h1>loading</h1>');
+                .html('<h3>Hang on, I\'m looking for more news.</h3>');
         }
     }
 

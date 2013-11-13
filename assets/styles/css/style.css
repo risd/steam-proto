@@ -835,26 +835,13 @@ input[type="submit"]:hover {
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased; }
 
-/*
--- EVENT --------------------------------------
-
------------------------------------------------
-*/
-.content.event {
-  background: #fffbdb;
-  padding-bottom: 80px; }
-
-.content.event h3 {
-  color: #516272; }
-
-.content.event .filter-type {
-  color: #ff8830; }
-
-.content.event .post-date li {
-  color: #516272; }
-
-.content.event ul li {
-  color: #ff8830; }
+.loading h3 {
+  font-size: 48px;
+  line-height: 53px;
+  letter-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  padding: 20px 0; }
 
 /*
 -- LINK --------------------------------------
@@ -901,6 +888,33 @@ input[type="submit"]:hover {
   color: white; }
 
 /*
+-- EVENT --------------------------------------
+
+-----------------------------------------------
+*/
+.content.event {
+  background: #fffbdb;
+  padding-bottom: 80px; }
+
+.content.event h3 {
+  color: #516272; }
+
+.content.event .filter-type {
+  color: #ff8830; }
+
+.content.event .post-date li {
+  color: #516272; }
+
+.content.event ul li {
+  color: #ff8830; }
+
+.event + .loading {
+  background: #fffbdb; }
+
+.event + .loading > h3 {
+  color: #516272; }
+
+/*
 -- TWEET --------------------------------------
 
 -----------------------------------------------
@@ -931,6 +945,12 @@ input[type="submit"]:hover {
 
 .content.tweet .sharing li:hover {
   color: #ff607f; }
+
+.tweet + .loading {
+  background: url("../../img/shapes/grid-pattern.png"); }
+
+.tweet + .loading > h3 {
+  color: #516272; }
 
 /*
 -- FEATURE ------------------------------------
@@ -964,6 +984,12 @@ input[type="submit"]:hover {
 
 .content.feature .post-date {
   color: #516272; }
+
+.feature + .loading {
+  background: #f0fcf6; }
+
+.feature + .loading > h3 {
+  color: #68e540; }
 
 /*
 -- SOCIAL -------------------------------------
