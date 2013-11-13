@@ -835,13 +835,13 @@ input[type="submit"]:hover {
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased; }
 
-.loading h3 {
-  font-size: 48px;
-  line-height: 53px;
-  letter-spacing: -1px;
-  -webkit-font-smoothing: antialiased;
+.loading {
   text-align: center;
-  padding: 20px 0; }
+  position: relative;
+  background: white; }
+
+.loading svg {
+  margin: 100px 0; }
 
 /*
 -- LINK --------------------------------------
@@ -1451,7 +1451,7 @@ h2.blog-feed {
   fill: rgba(104, 229, 64, 0);
   stroke: #68e540;
   -webkit-transform-origin: 50% 50%;
-  -webkit-animation: pulse 2.5s ease-in-out  infinite alternate;
+  -webkit-animation: pulse 1.5s ease-in-out  infinite alternate;
   -webkit-transition: all 0.5s ease-in-out; }
 
 .frame line, .frame polygon {

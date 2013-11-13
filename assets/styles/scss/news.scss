@@ -36,15 +36,13 @@
 		-webkit-font-smoothing: antialiased;
 	}
 
-	.loading h3 {
-		font-size:48px;
-		line-height:53px;
-		letter-spacing: -1px;
-		-webkit-font-smoothing: antialiased;
-
+	.loading {
 		text-align: center;
-
-		padding: 20px 0;
+		position: relative;
+		background: white;
+	}
+	.loading svg {
+		margin: 100px 0;
 	}
 
 

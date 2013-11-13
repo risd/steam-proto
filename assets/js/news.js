@@ -110,6 +110,7 @@ var NewsPage = function () {
         news = [],
         filter,       // ref to filter state
         el,
+        loading_html, // what the loading div should contain
         hash,         // cur hash of page
         fetching,     // state: is server call being made?
         total_count,  // total count from the server
@@ -124,6 +125,12 @@ var NewsPage = function () {
     page.filter = function (x) {
         if (!arguments.length) return filter;
         filter = x;
+        return page;
+    };
+
+    page.loading = function (x) {
+        if (!arguments.length) return loading_html;
+        loading_html = d3.select(x).html();
         return page;
     };
 
@@ -250,12 +257,10 @@ var NewsPage = function () {
     }
 
     function render_dom () {
-        if (!next_uri) {
-            el.selectAll('.loading')
-                .data([])
-                .exit()
-                .remove();
-        }
+        el.selectAll('.loading')
+            .data([])
+            .exit()
+            .remove();
 
         // add new stuff
         el.selectAll('.content')
@@ -318,7 +323,7 @@ var NewsPage = function () {
                 .enter()
                 .append('div')
                 .attr('class', 'loading')
-                .html('<h3>Hang on, I\'m looking for more news.</h3>');
+                .html(loading_html);
         }
     }
 
@@ -409,7 +414,8 @@ if (filter_el[0][0]) {
     var news_el = d3.select('.wrapper');
 
     var news_page = NewsPage()
-                    .el(news_el);
+                    .el(news_el)
+                    .loading('.loading');
 
     var filter = FilterNews()
                     .el(filter_el);

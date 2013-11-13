@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$blue".
-        on line 59 of assets/styles/scss/news.scss
+        on line 57 of assets/styles/scss/news.scss
 
-54: 
-55: -----------------------------------------------
-56: *\/
-57: 
-58: 	.link{
-59: 		background:$blue;
-60: 		padding:20px 0px 60px 0px;
-61: 		border-bottom:1px solid $blue-dark;
-62: 	}
-63: 
-64: 	.link .post-date{
+52: 
+53: -----------------------------------------------
+54: *\/
+55: 
+56: 	.link{
+57: 		background:$blue;
+58: 		padding:20px 0px 60px 0px;
+59: 		border-bottom:1px solid $blue-dark;
+60: 	}
+61: 
+62: 	.link .post-date{
 
 Backtrace:
-assets/styles/scss/news.scss:59
+assets/styles/scss/news.scss:57
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/variable.rb:48:in `_perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/tree/visitors/perform.rb:301:in `visit_prop'
@@ -61,4 +61,4 @@ assets/styles/scss/news.scss:59
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 59 of assets/styles/scss/news.scss\A \A 54: \A 55: -----------------------------------------------\A 56: */\A 57: \A 58: 	.link{\A 59: 		background:$blue;\A 60: 		padding:20px 0px 60px 0px;\A 61: 		border-bottom:1px solid $blue-dark;\A 62: 	}\A 63: \A 64: 	.link .post-date{"; }
+  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 57 of assets/styles/scss/news.scss\A \A 52: \A 53: -----------------------------------------------\A 54: */\A 55: \A 56: 	.link{\A 57: 		background:$blue;\A 58: 		padding:20px 0px 60px 0px;\A 59: 		border-bottom:1px solid $blue-dark;\A 60: 	}\A 61: \A 62: 	.link .post-date{"; }
