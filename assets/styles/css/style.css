@@ -833,7 +833,8 @@ input[type="submit"]:hover {
   font-size: 48px;
   line-height: 53px;
   letter-spacing: -1px;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 .loading {
   text-align: center;
