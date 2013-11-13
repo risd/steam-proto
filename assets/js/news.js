@@ -96,7 +96,8 @@ var FilterNews = function () {
                 d.active = 1;
 
                 if (page) {
-                    page.update();
+                    page.apply_filter()
+                        .maybe_fetch();
                 }
             });
         return filter;
@@ -107,10 +108,12 @@ var FilterNews = function () {
 var NewsPage = function () {
     var page = {},
         news = [],
-        filter,     // ref to filter state
+        filter,       // ref to filter state
         el,
-        hash,       // cur hash of page
-        content_sel;
+        hash,         // cur hash of page
+        fetching,     // state: is server call being made?
+        total_count,  // total count from the server
+        next_uri;     // the uri to hit next time around
 
     page.el = function (x) {
         if (!arguments.length) return el;
@@ -130,38 +133,11 @@ var NewsPage = function () {
         return page;
     };
 
-    page.setup = function () {
-        if (hash) {
-            // load just the single article
-            d3.json(STEAM.api.news(hash), function (api_news) {
-                news = [];
-                news.push(api_news);
-                render_dom();
-            });
-        } else {
-            d3.json(STEAM.api.news(), function (api_news) {
-                if (DEBUG) console.log('News loaded');
-                if (DEBUG) console.log(api_news);
-
-                // sort news based on time.
-                console.log(api_news);
-                news = api_news.objects.sort(function (a, b) {
-                    return b.epoch_timestamp - a.epoch_timestamp;
-                });
-
-                // add elements to the dom
-                render_dom();
-            });
-        }
-
-        return page;
-    };
-
-    page.update = function () {
+    page.apply_filter = function () {
         // add .hidden class to those that are not active
         var scroll_flag = false;
 
-        content_sel
+        el.selectAll('.content')
             .classed('hidden', function (d) {
                 // filters been defined?
                 if (filter) {
@@ -201,6 +177,26 @@ var NewsPage = function () {
         return page;
     };
 
+    page.setup = function () {
+        if (hash) {
+            // load just the single article
+            d3.json(STEAM.api.news(hash), function (api_news) {
+                news = [];
+                news.push(api_news);
+                render_dom();
+            });
+        } else {
+            d3.json(STEAM.api.news(), add_sort);
+
+            // initiate infinite scroll
+            d3.select(window)
+                .on('scroll', maybe_fetch)
+                .on('resize', maybe_fetch);
+        }
+
+        return page;
+    };
+
     function scrollTween(offset) {
       return function() {
         var i = d3.interpolateNumber(
@@ -210,10 +206,60 @@ var NewsPage = function () {
       };
     }
 
+    function maybe_fetch () {
+        if ((!fetching) &&
+            (next_uri) &&
+            (d3.select('.loading').node().getBoundingClientRect().top <
+                window.innerHeight)) {
+
+            fetch();
+        }
+    }
+    page.maybe_fetch = maybe_fetch;
+
+    function fetch () {
+        console.log('fetching');
+        fetching = true;
+        d3.json(STEAM.url(next_uri), add_sort);
+    }
+
+    function add_sort (error, api_news) {
+        fetching = false;
+
+        if (DEBUG) console.log('News loaded');
+        console.log(api_news);
+
+        if ((!('objects' in api_news)) || !api_news.objects.length) {
+            console.log('Could not get more data.');
+            return;
+        }
+
+        total_count = api_news.meta.total_count;
+        next_uri = api_news.meta.next;
+
+        var sorted_news = api_news.objects.sort(function (a, b) {
+            return b.epoch_timestamp - a.epoch_timestamp;
+        });
+
+        // add news to the dom
+        sorted_news.forEach(function (d, i) {
+            news.push(d);
+        });
+
+        render_dom();
+    }
+
     function render_dom () {
+        if (!next_uri) {
+            el.selectAll('.loading')
+                .data([])
+                .exit()
+                .remove();
+        }
+
         // add new stuff
-        content_sel = el.selectAll('.content')
-            .data(news)
+        el.selectAll('.content')
+            .data(news, function (d) { return d.id; })
             .enter()
             .append('section')
             .attr('class', function (d) {
@@ -228,7 +274,29 @@ var NewsPage = function () {
                 // set type in d, used to update dom
                 d.type = type;
 
-                return 'content active ' + type;
+
+                // apply the filter that is currently on the page
+                var hidden = '';
+                if (filter) {
+                    var active_filters = [];
+                    filter.data().forEach(function(el, index) {
+                        if (el.active)  {
+                            active_filters.push(el.type);
+                        }
+                    });
+
+                    // active filters
+                    if (active_filters.length > 0) {
+                        // if one is active, others are not
+
+                        if (active_filters.indexOf(d.type) === -1) {
+                            hidden = ' hidden';
+                        }
+                    }
+                }
+
+
+                return 'content active ' + type + hidden;
             })
             .html(function (d) {
                 var type;
@@ -243,6 +311,15 @@ var NewsPage = function () {
 
             })
             .call(add_links);
+
+        if (next_uri) {
+            el.selectAll('.loading')
+                .data([1])
+                .enter()
+                .append('div')
+                .attr('class', 'loading')
+                .html('<h1>loading</h1>');
+        }
     }
 
 
@@ -284,8 +361,6 @@ var NewsPage = function () {
 
                     var parent_el = d3.select(d3.select(this)[0][0].parentNode);
                     var input_el = parent_el.select('input');
-
-                    console.log(parent_el);
 
                     if (input_el.classed('hidden')) {
                         input_el.classed('hidden', false);
