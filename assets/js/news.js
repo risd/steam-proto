@@ -315,8 +315,10 @@ var NewsPage = function () {
             path = window.location.href +
                     '#' + d.id + '-' + d.tumbl.steam_url;
         } else {
-            path = window.location.href +
-                    '#' + d.id;
+            path = "https://twitter.com/" +
+                   d.tweet.screen_name +
+                   '/status/' +
+                   d.tweet.tid;
         }
         return path;
     }
