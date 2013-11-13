@@ -2,7 +2,9 @@ var TweetFeed = function () {
     var feed = {},
         tweets = [],
         tweet_sel,
-        position = 0,     // position in the array of the current tweet
+        position = 0,      // position in the array of the current tweet
+        paused = false,
+        rotation_interval,
         el;
 
     feed.el = function (x) {
@@ -20,11 +22,45 @@ var TweetFeed = function () {
 
             add_to_dom();
 
-            setInterval(rotate, 5000);
+            start_cycle();
         });
 
         return feed;
     };
+
+    feed.maybe_pause_cycle = function () {
+        // check status against the page 
+        if ((!paused) &&
+            (d3.select('#twitter-feed .active')
+                .node()
+                .getBoundingClientRect()
+                .top < 0)) {
+
+            console.log('pausing');
+            pause_cycle();
+            paused = true;
+            return;
+
+        } else if ((paused) &&
+                   (d3.select('#twitter-feed .active')
+                       .node()
+                       .getBoundingClientRect()
+                       .top > 0)) {
+
+            console.log('starting');
+            start_cycle();
+            paused = false;
+            return;
+        }
+
+    };
+
+    function start_cycle () {
+        rotation_interval = setInterval(rotate, 5000);
+    }
+    function pause_cycle () {
+        clearInterval(rotation_interval);
+    }
 
     function add_to_dom () {
         tweet_sel = el.selectAll('.single-tweet')
@@ -83,4 +119,6 @@ if (twitter_feed_el[0][0]) {
     var tweet_feed = TweetFeed()
                     .el(twitter_feed_el)
                     .setup();
+    d3.select(window)
+        .on('scroll', tweet_feed.maybe_pause_cycle);
 }
