@@ -4,6 +4,7 @@ var TweetFeed = function () {
         tweet_sel,
         position = 0,      // position in the array of the current tweet
         paused = false,
+        loaded = false,
         rotation_interval,
         el;
 
@@ -22,6 +23,8 @@ var TweetFeed = function () {
 
             add_to_dom();
 
+            loaded = true;
+
             start_cycle();
         });
 
@@ -30,7 +33,8 @@ var TweetFeed = function () {
 
     feed.maybe_pause_cycle = function () {
         // check status against the page 
-        if ((!paused) &&
+        if ((loaded) &&
+            (!paused) &&
             (d3.select('#twitter-feed .active')
                 .node()
                 .getBoundingClientRect()
@@ -41,7 +45,8 @@ var TweetFeed = function () {
             paused = true;
             return;
 
-        } else if ((paused) &&
+        } else if ((loaded) &&
+                   (paused) &&
                    (d3.select('#twitter-feed .active')
                        .node()
                        .getBoundingClientRect()

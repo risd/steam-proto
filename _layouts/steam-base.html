@@ -31,6 +31,7 @@
         }
     };
     STEAM.api = {
+        // used to populate the news page
         news: function (hash) {
             // hash will come through as
             // #id-title
@@ -41,9 +42,12 @@
             }
             return STEAM.url('/api/v1/news/?format=json')
         },
+        // populates ticker
         tumbl: STEAM.url('/api/v1/tumbl/?format=json'),
+        // populates happening everywhere
         hash_tweet: STEAM.url('/api/v1/hash_tweet/?format=json'),
-        tweet: STEAM.url('/api/v1/tweet/?format=json'),
+        announcement: STEAM.url('/api/v1/announcement/?format=json'),
+        // post to data to mailchimp
         join_us: STEAM.url('/join-us/')
     };
   var DEBUG = true;
@@ -53,5 +57,6 @@
   <script src="{{ site.siteurl }}/assets/js/toots.js"></script>
   <script src="{{ site.siteurl }}/assets/js/ticker.js"></script>
   <script src="{{ site.siteurl }}/assets/js/marketing.js"></script>
+  <script src="{{ site.siteurl }}/assets/js/announcement.js"></script>
 </body>
 </html>
