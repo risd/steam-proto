@@ -1,26 +1,26 @@
 /*
-Syntax error: Undefined variable: "$green".
-        on line 87 of assets/styles/scss/narrative.scss
+Syntax error: Undefined variable: "$blue".
+        on line 79 of assets/styles/scss/narrative.scss
 
-82: *\/
+74: 		z-index:2;
+75: 	}
+76: 
+77: 	.announcement {
+78: 		position: absolute;
+79: 		background: transparentize($blue, 0.2);
+80: 
+81: 		height: 100%;
+82: 		width: 100%;
 83: 	
-84: 	/* Key to Innovation / big introduction *\/
-85: 
-86: 	#key-to-innovation{
-87: 		border:20px solid $green;
-88: 		background:white;
-89: 		padding-bottom:250px;
-90: 	}
-91: 
-92: 	#key-to-innovation .body-text{
+84: 		z-index: 4;
 
 Backtrace:
-assets/styles/scss/narrative.scss:87
+assets/styles/scss/narrative.scss:79
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/variable.rb:48:in `_perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/list_literal.rb:58:in `block in _perform'
-/Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/list_literal.rb:58:in `map'
-/Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/list_literal.rb:58:in `_perform'
+/Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/funcall.rb:101:in `block in _perform'
+/Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/funcall.rb:101:in `map'
+/Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/funcall.rb:101:in `_perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/tree/visitors/perform.rb:301:in `visit_prop'
 /Users/rubenrodriguez/.rvm/gems/ruby-1.9.3-p448@steam-proto/gems/sass-3.3.0.alpha.229/lib/sass/tree/visitors/base.rb:37:in `visit'
@@ -65,4 +65,4 @@ assets/styles/scss/narrative.scss:87
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$green\".\A         on line 87 of assets/styles/scss/narrative.scss\A \A 82: */\A 83: 	\A 84: 	/* Key to Innovation / big introduction */\A 85: \A 86: 	#key-to-innovation{\A 87: 		border:20px solid $green;\A 88: 		background:white;\A 89: 		padding-bottom:250px;\A 90: 	}\A 91: \A 92: 	#key-to-innovation .body-text{"; }
+  content: "Syntax error: Undefined variable: \"$blue\".\A         on line 79 of assets/styles/scss/narrative.scss\A \A 74: 		z-index:2;\A 75: 	}\A 76: \A 77: 	.announcement {\A 78: 		position: absolute;\A 79: 		background: transparentize($blue, 0.2);\A 80: \A 81: 		height: 100%;\A 82: 		width: 100%;\A 83: 	\A 84: 		z-index: 4;"; }
