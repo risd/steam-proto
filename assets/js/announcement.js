@@ -43,7 +43,7 @@ var Announcement = function () {
     function set_scroll () {
 
         d3.select(window)
-            .on('scroll', function () {
+            .on('scroll.announcement', function () {
                 if (pageYOffset < innerHeight) {
                     wrapper.style(vendor +'transform',
                                   'translate(0px, ' +
