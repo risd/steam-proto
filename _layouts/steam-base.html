@@ -1,7 +1,7 @@
 
 {% include top.html %}
 
-<body>
+<body class="{{ page.body-class}}">
     {% include main-nav.html %}
     <div class="wrapper">
 
@@ -10,10 +10,6 @@
         <!-- scripts can live here -->
     
     </div> <!-- /wrapper -->
-
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="{{ site.siteurl }}/assets/js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="{{ site.siteurl }}/assets/js/lgtm-standalone.js"></script>
     
     <script>
     var STEAM = window.STEAM = {
@@ -50,11 +46,6 @@
   var DEBUG = true;
   </script>
 
-  <script src="{{ site.siteurl }}/assets/js/common.js"></script>
-  <script src="{{ site.siteurl }}/assets/js/news.js"></script>
-  <script src="{{ site.siteurl }}/assets/js/toots.js"></script>
-  <script src="{{ site.siteurl }}/assets/js/ticker.js"></script>
-  <script src="{{ site.siteurl }}/assets/js/marketing.js"></script>
-  <script src="{{ site.siteurl }}/assets/js/announcement.js"></script>
+  <script src="{{ site.siteurl }}/assets/js/dist/site.js"></script>
 </body>
 </html>

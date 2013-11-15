@@ -1,2 +1,3 @@
 web: jekyll serve --watch --config _config.dev.yml
 sass: sass --watch assets/styles/scss:assets/styles/css
+js: fswatch assets/js/src/ make
