@@ -1,6 +1,6 @@
 BROWSERIFY = node_modules/.bin/browserify
 SMASH = node_modules/.bin/smash
-UGLIFY = node_modules/.bin/uglify
+UGLIFY = node_modules/.bin/uglifyjs
 
 all: assets/js/dist assets/js/dist/d3.js assets/js/dist/site.js assets/js/dist/site.min.js
 
