@@ -43,9 +43,13 @@
         // post to data to mailchimp
         join_us: STEAM.url('/join-us/')
     };
-  var DEBUG = true;
-  </script>
+    var DEBUG = true;
+    </script>
+    {% if site.dev %}
+    <script src="{{ site.siteurl }}/assets/js/dist/site.js"></script>
+    {% else %}
+    <script src="{{ site.siteurl }}/assets/js/dist/site.min.js"></script>
+    {% endif %}
 
-  <script src="{{ site.siteurl }}/assets/js/dist/site.js"></script>
 </body>
 </html>

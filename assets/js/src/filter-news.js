@@ -84,13 +84,13 @@ var FilterNews = function () {
                         // this one was just clicked
 
                         data[i].active = 1;
-                        filter_el.select('.filter.' + data[i].type)
+                        el.select('.filter.' + data[i].type)
                             .classed('active', true);
                     } else {
                         // these filter are now disabled
 
                         data[i].active = 0;
-                        filter_el.select('.filter.' + data[i].type)
+                        el.select('.filter.' + data[i].type)
                             .classed('active', false);
                     }
                 }

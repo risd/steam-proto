@@ -2,7 +2,7 @@ BROWSERIFY = node_modules/.bin/browserify
 SMASH = node_modules/.bin/smash
 UGLIFY = node_modules/.bin/uglify
 
-all: assets/js/dist assets/js/dist/d3.js assets/js/dist/site.js
+all: assets/js/dist assets/js/dist/d3.js assets/js/dist/site.js assets/js/dist/site.min.js
 
 node_modules: package.json
 	npm install
@@ -27,3 +27,6 @@ assets/js/dist/d3.js: node_modules node_modules/d3/*
 
 assets/js/dist/site.js: assets/js/dist assets/js/dist/d3.js $(shell $(BROWSERIFY) --list assets/js/src/index.js)
 	$(BROWSERIFY) assets/js/src/index.js > assets/js/dist/site.js
+
+assets/js/dist/site.min.js: assets/js/dist/site.js
+	$(UGLIFY) assets/js/dist/site.js > assets/js/dist/site.min.js
