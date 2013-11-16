@@ -73,7 +73,7 @@ var Announcement = function () {
 };
 
 module.exports = Announcement;
-},{"d3":11}],2:[function(require,module,exports){
+},{"d3":13}],2:[function(require,module,exports){
 var d3 = require('d3');
 
 var FilterNews = function () {
@@ -185,10 +185,12 @@ var FilterNews = function () {
 };
 
 module.exports = FilterNews;
-},{"d3":11}],3:[function(require,module,exports){
+},{"d3":13}],3:[function(require,module,exports){
 var d3 = require('d3'),
     Nav = require('./nav.js'),
     Announcement = require('./announcement.js'),
+    Lettering = require('./lettering.js'),
+    Narrative = require('./narrative.js'),
     NewsPage = require('./news-page.js'),
     FilterNews = require('./filter-news.js'),
     Marketing = require('./marketing.js'),
@@ -215,18 +217,12 @@ if (body_el.classed('narrative-page')) {
         .wrapper(d3.select('body > div.wrapper'))
         .setup();
 
-    var form_wrapper_el = d3.select('#form-wrapper'),
-        form_el = form_wrapper_el.select('form'),
-        server_error_el = form_el.select('.server-error'),
-        thank_you_el = form_wrapper_el.select('.thank-you');
+    var lettering = Lettering();
+    lettering(d3.select('.innovation-title'));
 
-    var marketing = Marketing()
-        .el(form_el)
-        .wrapperEl(form_wrapper_el)
-        .serverErrorEl(server_error_el)
-        .thankYouEl(thank_you_el)
-        .initialize();
-
+    // sets up innovation-title reveal
+    var narrative = Narrative();
+    narrative();
 
     var slider = Slider()
         .cssAttr('margin-top')
@@ -238,6 +234,18 @@ if (body_el.classed('narrative-page')) {
         .el(d3.select('#news-ticker-wrapper > .news-ticker'))
         .slider(slider)
         .setup();
+
+    var form_wrapper_el = d3.select('#form-wrapper'),
+        form_el = form_wrapper_el.select('form'),
+        server_error_el = form_el.select('.server-error'),
+        thank_you_el = form_wrapper_el.select('.thank-you');
+
+    var marketing = Marketing()
+        .el(form_el)
+        .wrapperEl(form_wrapper_el)
+        .serverErrorEl(server_error_el)
+        .thankYouEl(thank_you_el)
+        .initialize();
 
     var tweet_feed = TweetFeed()
         .el(d3.select('#twitter-feed'))
@@ -266,7 +274,26 @@ if (body_el.classed('news-page')) {
     filter.page(news_page)
           .setup();
 }
-},{"./announcement.js":1,"./filter-news.js":2,"./marketing.js":4,"./nav.js":5,"./news-page.js":6,"./slider.js":7,"./ticker.js":8,"./toots.js":9,"d3":11}],4:[function(require,module,exports){
+},{"./announcement.js":1,"./filter-news.js":2,"./lettering.js":4,"./marketing.js":5,"./narrative.js":6,"./nav.js":7,"./news-page.js":8,"./slider.js":9,"./ticker.js":10,"./toots.js":11,"d3":13}],4:[function(require,module,exports){
+var Lettering = function () {
+
+    function lettering (el) {
+        // el is a d3 element
+        var lettered = '';
+
+        el.text().split('').forEach(function (d, i) {
+            lettered += '<span class="char' + (i+1) + '">' +
+                        d +'</span>';
+        });
+
+        el.html(lettered);
+    }
+
+    return lettering;
+};
+
+module.exports = Lettering;
+},{}],5:[function(require,module,exports){
 var d3 = require('d3'),
     LGTM = require('lgtm');
 
@@ -408,7 +435,33 @@ var Marketing = function () {
 };
 
 module.exports = Marketing;
-},{"d3":11,"lgtm":12}],5:[function(require,module,exports){
+},{"d3":13,"lgtm":14}],6:[function(require,module,exports){
+var d3 = require('d3');
+
+var Narrative = function () {
+    var innovation_title_el = d3.select('.innovation-title');
+
+    function narrative () {
+        d3.select(window)
+            .on('scroll.narrativeInnovation', function () {
+                if (innovation_title_el
+                        .node()
+                        .getBoundingClientRect()
+                        .top < 150) {
+                    innovation_title_el.classed('revealed', true);
+
+                    // remove listener. only happens once.
+                    d3.select(window)
+                        .on('scroll.narrativeInnovation', null);
+                }
+            });
+    }
+
+    return narrative;
+};
+
+module.exports = Narrative;
+},{"d3":13}],7:[function(require,module,exports){
 var d3 = require('d3');
 
 var Nav = function () {
@@ -507,7 +560,7 @@ var Nav = function () {
 };
 
 module.exports = Nav;
-},{"d3":11}],6:[function(require,module,exports){
+},{"d3":13}],8:[function(require,module,exports){
 var d3 = require('d3');
 
 var NewsPage = function () {
@@ -812,7 +865,7 @@ var NewsPage = function () {
 };
 
 module.exports = NewsPage;
-},{"d3":11}],7:[function(require,module,exports){
+},{"d3":13}],9:[function(require,module,exports){
 var d3 = require('d3');
 
 var Slider = function () {
@@ -896,7 +949,7 @@ var Slider = function () {
 };
 
 module.exports = Slider;
-},{"d3":11}],8:[function(require,module,exports){
+},{"d3":13}],10:[function(require,module,exports){
 var d3 = require('d3');
 
 var Ticker = function () {
@@ -969,7 +1022,7 @@ var Ticker = function () {
 };
 
 module.exports = Ticker;
-},{"d3":11}],9:[function(require,module,exports){
+},{"d3":13}],11:[function(require,module,exports){
 var d3 = require('d3');
 
 var TweetFeed = function () {
@@ -1096,7 +1149,7 @@ var TweetFeed = function () {
 
 module.exports = TweetFeed;
 
-},{"d3":11}],10:[function(require,module,exports){
+},{"d3":13}],12:[function(require,module,exports){
 d3 = function() {
   var d3 = {
     version: "3.3.9"
@@ -10371,12 +10424,12 @@ d3 = function() {
   });
   return d3;
 }();
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 require("./d3");
 module.exports = d3;
 (function () { delete this.d3; })(); // unset global
 
-},{"./d3":10}],12:[function(require,module,exports){
+},{"./d3":12}],14:[function(require,module,exports){
 "use strict";
 var ValidatorBuilder = require("./lgtm/validator_builder");
 var ObjectValidator = require("./lgtm/object_validator");
@@ -10423,7 +10476,7 @@ exports.configure = configure;
 exports.validator = validator;
 exports.helpers = helpers;
 exports.ObjectValidator = ObjectValidator;
-},{"./lgtm/config":13,"./lgtm/helpers/core":14,"./lgtm/object_validator":15,"./lgtm/validator_builder":17}],13:[function(require,module,exports){
+},{"./lgtm/config":15,"./lgtm/helpers/core":16,"./lgtm/object_validator":17,"./lgtm/validator_builder":19}],15:[function(require,module,exports){
 "use strict";
 var config = {};
 
@@ -10433,7 +10486,7 @@ config.defer = function() {
 
 
 module.exports = config;
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 var ValidatorBuilder = require("../validator_builder");
 
@@ -10511,7 +10564,7 @@ exports.checkEmail = checkEmail;
 exports.checkMinLength = checkMinLength;
 exports.checkMaxLength = checkMaxLength;
 exports.register = register;
-},{"../validator_builder":17}],15:[function(require,module,exports){
+},{"../validator_builder":19}],17:[function(require,module,exports){
 "use strict";
 var config = require("./config");
 var __dependency1__ = require("./utils");
@@ -10677,7 +10730,7 @@ ObjectValidator.prototype = {
 
 
 module.exports = ObjectValidator;
-},{"./config":13,"./utils":16}],16:[function(require,module,exports){
+},{"./config":15,"./utils":18}],18:[function(require,module,exports){
 "use strict";
 var config = require("./config");
 
@@ -10806,7 +10859,7 @@ exports.contains = contains;
 exports.uniq = uniq;
 exports.resolve = resolve;
 exports.all = all;
-},{"./config":13}],17:[function(require,module,exports){
+},{"./config":15}],19:[function(require,module,exports){
 "use strict";
 var ObjectValidator = require("./object_validator");
 var __dependency1__ = require("./utils");
@@ -10918,5 +10971,5 @@ ValidatorBuilder.unregisterHelper = function(name) {
 
 
 module.exports = ValidatorBuilder;
-},{"./object_validator":15,"./utils":16}]},{},[3])
+},{"./object_validator":17,"./utils":18}]},{},[3])
 ;

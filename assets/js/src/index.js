@@ -1,6 +1,8 @@
 var d3 = require('d3'),
     Nav = require('./nav.js'),
     Announcement = require('./announcement.js'),
+    Lettering = require('./lettering.js'),
+    Narrative = require('./narrative.js'),
     NewsPage = require('./news-page.js'),
     FilterNews = require('./filter-news.js'),
     Marketing = require('./marketing.js'),
@@ -27,18 +29,12 @@ if (body_el.classed('narrative-page')) {
         .wrapper(d3.select('body > div.wrapper'))
         .setup();
 
-    var form_wrapper_el = d3.select('#form-wrapper'),
-        form_el = form_wrapper_el.select('form'),
-        server_error_el = form_el.select('.server-error'),
-        thank_you_el = form_wrapper_el.select('.thank-you');
+    var lettering = Lettering();
+    lettering(d3.select('.innovation-title'));
 
-    var marketing = Marketing()
-        .el(form_el)
-        .wrapperEl(form_wrapper_el)
-        .serverErrorEl(server_error_el)
-        .thankYouEl(thank_you_el)
-        .initialize();
-
+    // sets up innovation-title reveal
+    var narrative = Narrative();
+    narrative();
 
     var slider = Slider()
         .cssAttr('margin-top')
@@ -50,6 +46,18 @@ if (body_el.classed('narrative-page')) {
         .el(d3.select('#news-ticker-wrapper > .news-ticker'))
         .slider(slider)
         .setup();
+
+    var form_wrapper_el = d3.select('#form-wrapper'),
+        form_el = form_wrapper_el.select('form'),
+        server_error_el = form_el.select('.server-error'),
+        thank_you_el = form_wrapper_el.select('.thank-you');
+
+    var marketing = Marketing()
+        .el(form_el)
+        .wrapperEl(form_wrapper_el)
+        .serverErrorEl(server_error_el)
+        .thankYouEl(thank_you_el)
+        .initialize();
 
     var tweet_feed = TweetFeed()
         .el(d3.select('#twitter-feed'))
