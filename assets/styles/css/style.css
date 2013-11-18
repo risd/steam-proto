@@ -693,10 +693,20 @@ a.nav-down.hidden {
   z-index: 2; }
 
 .single-tweet {
-  display: none; }
+  margin-left: -9999px;
+  opacity: 0;
+  -webkit-transition-property: margin-left, opacity;
+  -webkit-transition-duration: 0.0s, 0.5s;
+  -webkit-transition-delay: 0.5s, 0.0s;
+  -webkit-transition-timing-function: ease-out; }
 
 .single-tweet.active {
-  display: block; }
+  margin-left: 16.972477%;
+  opacity: 1;
+  -webkit-transition-property: margin-left, opacity;
+  -webkit-transition-duration: 0.0s, 0.5s;
+  -webkit-transition-delay: 0.5s, 0.0s;
+  -webkit-transition-timing-function: ease-in; }
 
 /*type styling for a tweet*/
 .content p.tweet {

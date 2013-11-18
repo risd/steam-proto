@@ -1,5 +1,8 @@
 var d3 = require('d3'),
-    LGTM = require('lgtm');
+    LGTM = require('lgtm'),
+    Q = require('q');
+
+LGTM.configure('defer', Q.defer);
 
 var Marketing = function () {
     // manage mailchimp subscriptions
@@ -41,6 +44,12 @@ var Marketing = function () {
     marketing.serverErrorEl = function (x) {
         if (!arguments.length) return server_error_el;
         server_error_el = x;
+
+        // override the general server error if something
+        // is already in the DOM
+        if (server_error_el.html().length > 0) {
+            general_server_error = server_error_el.html();
+        }
         return marketing;
     };
 
